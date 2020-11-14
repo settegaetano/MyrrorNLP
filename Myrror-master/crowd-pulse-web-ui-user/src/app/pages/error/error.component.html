@@ -1,0 +1,15 @@
+<div class="full-scale-div" fxLayout fxLayoutAlign="center center">
+  <div class="main-content-page" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+    <span class="fa fa-exclamation-triangle fa-5x center" aria-hidden="true"></span>
+    <h1 class="center">Ops! Something went wrong!</h1>
+    <br>
+    <p>POSSIBLE REASONS</p>
+    <ul>
+      <li>Back-end servers are offline for maintenance</li>
+      <li>The resource requested is not available (error 404)</li>
+      <li>Internal server error (error 500)</li>
+    </ul>
+    <br>
+    <button fxFlex="20" mat-raised-button (click)="goBack()">Go Back</button>
+  </div>
+</div>

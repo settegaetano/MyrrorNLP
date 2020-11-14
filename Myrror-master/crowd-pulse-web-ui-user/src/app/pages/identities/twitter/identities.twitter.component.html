@@ -1,0 +1,125 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="page-title-header">
+  <i class="fa fa-twitter fa-4x" aria-hidden="true"></i>
+</div>
+
+<div class="main-content-page" fxLayout="row" fxLayoutAlign="center center" *ngIf="loading; else content">
+  <mat-spinner></mat-spinner>
+</div>
+
+<ng-template #content>
+  <div class="main-content-page" *ngIf="!user || !user.identities || !user.identities.twitter; else twitterData">
+    <h2>No Linked Account</h2>
+    <p>By linking your Twitter account, you agree that {{appName}} will be able to read your basic profile information
+      and your tweets.</p>
+    <button mat-raised-button color="primary" (click)="associate()">Link Account</button>
+  </div>
+
+  <ng-template #twitterData>
+    <div ngClass.gt-sm="main-content-page">
+      <h1 fxHide.lt-sm fxHide.sm>Twitter Account</h1>
+
+      <div class="twitter-actions-div" fxLayout fxLayoutAlign="center center" fxLayoutAlign.gt-sm="end center">
+        <div fxFlex fxFlex.gt-sm="60" fxLayout fxLayout.lt-md="column">
+          <mat-slide-toggle fxFlex [(ngModel)]="shareProfile" (change)="updateShareProfile()">Share Profile</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareMessages" (change)="updateShareMessages()">Share Messages</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareFriends" (change)="updateShareFriends()">Share Friends</mat-slide-toggle>
+        </div>
+        <span fxFlex.gt-sm="25"></span>
+        <button fxFlex="90" fxFlex.gt-sm="25" mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
+      </div>
+
+      <mat-card class="twitter-card">
+        <mat-card-title>Profile Data</mat-card-title>
+        <mat-table #table [dataSource]="dataSource">
+          <ng-container matColumnDef="dataName">
+            <mat-header-cell *cdkHeaderCellDef> Data </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dataName | uppercase }} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="dataValue">
+            <mat-header-cell *cdkHeaderCellDef> Value </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dataValue }} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+        <br>
+        <button mat-raised-button color="primary" (click)="updateProfile(true)">
+          <mat-icon aria-label="get_data">cached</mat-icon>
+          Update Profile
+        </button>
+      </mat-card>
+
+      <div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutWrap>
+
+        <!-- tweets -->
+        <mat-card fxFlex="50" fxFlex.lt-md="100" fxLayoutAlign="center center" class="twitter-card"
+                  *ngIf="loadingTweets; else tweetsCard">
+          <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #tweetsCard>
+          <mat-card fxFlex="50" fxFlex.lt-md="100" class="twitter-card">
+            <div *ngIf="tweets.length > 0; else noTweets">
+              <mat-card-title>Your last Tweets</mat-card-title>
+              <div class="tweets-div" *ngFor="let tweet of tweets">
+                <p> {{ tweet.text }} </p>
+                <mat-divider></mat-divider>
+              </div>
+              <button mat-raised-button color="primary" (click)="updateTweets(null, true)">
+                <mat-icon aria-label="get_data">cached</mat-icon>
+                Update Tweets
+              </button>
+            </div>
+            <ng-template #noTweets>
+              <mat-card-title>No Tweets Acquired</mat-card-title>
+              <mat-card-content>
+                In this section will be shown your tweet.
+              </mat-card-content>
+              <button mat-raised-button color="primary" (click)="updateTweets(null, true)">
+                <mat-icon aria-label="get_data">get_app</mat-icon>
+                Get Tweets
+              </button>
+            </ng-template>
+          </mat-card>
+        </ng-template>
+
+        <!-- friends -->
+        <mat-card fxFlex="48" fxFlex.lt-md="100" fxLayoutAlign="center center" class="twitter-card"
+                  *ngIf="loadingFriends; else friendsCard">
+          <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #friendsCard>
+          <mat-card fxFlex="48" fxFlex.lt-md="100" class="twitter-card">
+            <div *ngIf="friends.length > 0; else noFriends">
+              <mat-card-title>Your Friends</mat-card-title>
+              <div class="tweets-div" *ngFor="let friend of friends">
+                <p> {{ friend.contactName }} - {{ friend.type }} </p>
+                <mat-divider></mat-divider>
+              </div>
+              <div *ngIf="friends.length == 10">
+                <p>Other friends not shown.</p>
+              </div>
+              <button mat-raised-button color="primary" (click)="updateFriends(null, true)">
+                <mat-icon aria-label="get_data">cached</mat-icon>
+                Update Friends
+              </button>
+            </div>
+            <ng-template #noFriends>
+              <mat-card-title>No Friends Acquired</mat-card-title>
+              <mat-card-content>
+                In this section will be shown your friends (followings).
+              </mat-card-content>
+              <button mat-raised-button color="primary" (click)="updateFriends(null, true)">
+                <mat-icon aria-label="get_data">get_app</mat-icon>
+                Get Friends
+              </button>
+            </ng-template>
+          </mat-card>
+        </ng-template>
+      </div>
+
+    </div>
+  </ng-template>
+</ng-template>

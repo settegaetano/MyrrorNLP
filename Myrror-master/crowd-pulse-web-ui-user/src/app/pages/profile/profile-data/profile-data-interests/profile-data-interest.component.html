@@ -1,0 +1,60 @@
+<div ngClass.gt-sm="main-content-page">
+
+  <mat-card class="card-spacer" *ngIf="!data">
+    <h2>Interests</h2>
+    <p>Your interests will be shown here.</p>
+  </mat-card>
+
+  <div *ngIf="data">
+    <mat-card class="card-spacer">
+      <h3>Filters</h3>
+
+      <div fxLayout.lt-md="column">
+
+        <!-- filter by date -->
+        <mat-form-field fxFlex class="filter-date">
+          <input matInput [(ngModel)]="filter.dateFrom" [matDatepicker]="fromDate" placeholder="From Date"
+                 (ngModelChange)="updateChart()">
+          <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+          <mat-datepicker #fromDate></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field fxFlex class="filter-date">
+          <input matInput [(ngModel)]="filter.dateTo" [matDatepicker]="toDate" placeholder="To Date"
+                 (ngModelChange)="updateChart()">
+          <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+          <mat-datepicker #toDate></mat-datepicker>
+        </mat-form-field>
+
+        <!-- filter by source -->
+        <mat-form-field fxFlex class="filter-date">
+          <mat-select [(ngModel)]="filter.source" (ngModelChange)="updateChart()" placeholder="Source">
+            <mat-option *ngFor="let source of sources" [value]="source.id">
+              {{ source.name | uppercase }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+    </mat-card>
+
+    <mat-card *ngIf="data.length > 0; else noInterest">
+      <h2>Interests</h2>
+      <angular-tag-cloud
+        [data]="data"
+        [width]="options.width"
+        [overflow]="options.overflow"
+        [zoomOnHover]="zoomOnHoverOptions">
+      </angular-tag-cloud>
+    </mat-card>
+
+    <ng-template #noInterest>
+      <mat-card>
+        <h2>Interests</h2>
+        <p>{{ appName }} is processing the data about your interests.
+          Your visualization will be available soon… change the filters or come back tomorrow 😊</p>
+      </mat-card>
+    </ng-template>
+
+  </div>
+
+</div>

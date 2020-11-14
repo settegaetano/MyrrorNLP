@@ -1,0 +1,10 @@
+@import "../../../styles.scss";
+
+.full-scale-div {
+  margin-top: 0px;
+  height: calc(100vh - #{$navbar-height});
+}
+
+.center {
+  text-align: center;
+}

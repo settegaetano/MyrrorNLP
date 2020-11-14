@@ -1,0 +1,85 @@
+<div ngClass.gt-sm="main-content-page">
+
+  <div>
+    <mat-card class="card-spacer">
+      <h3>Filter</h3>
+      <div fxLayout.lt-md="column">
+
+        <!-- filter by date -->
+        <mat-form-field fxFlex class="filter-date">
+          <input matInput [(ngModel)]="filter.dateFrom" [matDatepicker]="fromDate" placeholder="From Date"
+                 (ngModelChange)="updateChart()">
+          <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+          <mat-datepicker #fromDate></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field fxFlex class="filter-date">
+          <input matInput [(ngModel)]="filter.dateTo" [matDatepicker]="toDate" placeholder="To Date"
+                 (ngModelChange)="updateChart()">
+          <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+          <mat-datepicker #toDate></mat-datepicker>
+        </mat-form-field>
+
+        <!-- filter by type -->
+        <mat-form-field fxFlex class="filter-date">
+          <mat-select [(ngModel)]="selectedType" (ngModelChange)="updateChart()" placeholder="Type">
+            <mat-option *ngFor="let type of types" [value]="type">
+              {{ type.name | uppercase }}
+
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- filter by type chart -->
+        <mat-form-field fxFlex class="filter-date">
+          <mat-select [(ngModel)]="selectedChart" (ngModelChange)="updateChart()" placeholder="Type">
+            <mat-option *ngFor="let type of visualization" [value]="type">
+              {{ type.name | uppercase }}
+
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </mat-card>
+
+    <div *ngIf="selectedType; else noBehaviorSelected">
+
+
+      <mat-card *ngIf="postsCoordinates && postsCoordinates.length > 0 && selectedType.id == 'location'">
+        <h1>{{ selectedType.name }}</h1>
+
+        <!-- this creates a google map on the page with the given lat/lng from -->
+        <!-- the component as the initial center of the map: -->
+        <agm-map [latitude]="postsCoordinates[0].latitude" [longitude]="postsCoordinates[0].longitude">
+          <agm-marker *ngFor="let marker of postsCoordinates"
+                      [iconUrl]="iconUrl"
+                      [latitude]="marker.latitude"
+                      [longitude]="marker.longitude"
+                      [title]="marker.text"
+                      [markerClickable]
+                      (markerClick)="clickedMarker(marker)">
+
+          </agm-marker>
+
+        </agm-map>
+      </mat-card>
+
+      <!-- this creates a chart for activities -->
+      <mat-card *ngIf="selectedType.id == 'activity' ">
+          <div [chart]="customChart"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'activity'">
+        <div [chart]="customChart2"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'activity' ">
+        <div [chart]="customChart3"></div>
+      </mat-card>
+    </div>
+    <ng-template #noBehaviorSelected>
+      <mat-card>
+        <p>No behavior type selected.</p>
+      </mat-card>
+    </ng-template>
+
+  </div>
+
+</div>

@@ -1,0 +1,53 @@
+@import "../../../../styles.scss";
+
+.profile-data-sidenav-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$navbar-height});
+  z-index: 1;
+}
+
+.profile-data-sidenav {
+  display: flex;
+  width: 246px;
+  padding: 16px;
+}
+
+.profile-data-sidenav-small {
+  width: 56px;
+  padding: 2px;
+}
+
+.spacer {
+  margin-left: 32px;
+}
+
+.holistic-data-table {
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+.filter-date {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.card-spacer {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.text-alignment {
+  text-align: center;
+}
+agm-map {
+  height: 100vh;
+}
+
+.stats-card {
+  margin: 5px;
+}
+
+.table-card {
+  margin: 16px -3px 16px;
+}

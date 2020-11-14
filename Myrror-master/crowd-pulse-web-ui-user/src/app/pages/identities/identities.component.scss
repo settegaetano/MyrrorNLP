@@ -1,0 +1,65 @@
+@import "../../../styles.scss";
+
+.identities-sidenav-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - #{$navbar-height});
+  z-index: 1;
+}
+
+.identities-sidenav-content {
+  display: flex;
+}
+
+.identities-sidenav {
+  display: flex;
+  width: 232px;
+  padding: 16px;
+}
+
+.identities-sidenav-small {
+  width: 56px;
+  padding: 2px;
+}
+
+.header-text-title {
+  font-size: 24px;
+}
+
+.identities-content {
+  margin-top: 50px;
+}
+
+.identities-card {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  height: 236px;
+}
+
+.user-image {
+  border-radius: 50%;
+  width: 168px;
+  background-color: rgba(74, 74, 74, 0.50);
+  margin: 16px;
+  margin-bottom: 32px;
+}
+
+.user-image-small {
+  border-radius: 50%;
+  width: 44px;
+  background-color: rgba(74, 74, 74, 0.50);
+  margin: 4px;
+  margin-bottom: 8px;
+}
+
+.identities-user-image {
+  border-radius: 50%;
+  width: 100px;
+  margin-bottom: 32px;
+  margin-right: 32px;
+  margin-top: 32px;
+}
+
+.spacer {
+  margin-left: 32px;
+}

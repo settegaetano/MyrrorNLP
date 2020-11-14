@@ -1,0 +1,5 @@
+<app-navbar *ngIf="authenticated.value"></app-navbar>
+<div class="content-margin-top">
+  <ng-progress [spinner]="false" [thick]="true"></ng-progress>
+  <router-outlet></router-outlet>
+</div>

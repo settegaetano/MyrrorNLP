@@ -1,0 +1,111 @@
+<mat-sidenav-container class="people-sidenav-container">
+  <mat-sidenav [mode]="'side'" opened="true"
+               class="people-sidenav mat-elevation-z3"
+               ngClass.lt-sm="people-sidenav-small mat-elevation-z3">
+
+    <mat-nav-list>
+      <nav>
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.demographics }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-address-card fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Demographics
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.interest }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-thumbs-up fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Interests
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.affects }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-smile-o fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Affects
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.cognitiveAspects }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-lightbulb-o fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Psychol. Aspects
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.behavior }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-child fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Behaviors
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.socialRelations }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-users fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Social Relations
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.physicalState }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-heart fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Physical States
+        </span>
+        </a>
+      </nav>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <!-- main content -->
+    <div fxLayout="row" fxLayoutAlign="start center" class="page-title-header">
+      <h2>People</h2>
+    </div>
+
+    <div *ngIf="routedPage.url == rootPage; else showSubPages" class="main-content-page">
+      <p>Here you can watch the community public data.</p>
+    </div>
+
+    <!-- holistic profile fields sub-pages -->
+    <ng-template #showSubPages>
+      <div *ngIf="selected === appRoutes.profile.demographics">
+        <app-people-demographics></app-people-demographics>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.interest">
+        <app-people-interests></app-people-interests>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.affects">
+        <app-people-affects></app-people-affects>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.cognitiveAspects">
+        <app-people-cognitive-aspects></app-people-cognitive-aspects>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.behavior">
+        <app-people-behavior></app-people-behavior>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.physicalState">
+        <app-people-physical-state></app-people-physical-state>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.socialRelations">
+        <app-people-social-relations></app-people-social-relations>
+      </div>
+    </ng-template>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

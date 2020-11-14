@@ -1,0 +1,33 @@
+<div *ngIf="!authenticated.value" class="home-div" fxLayout="column" fxLayoutAlign="center center">
+
+  <div class="logo-div" fxFlex fxLayout="row" fxLayoutAlign="center center">
+    <img fxFlex="90" src="assets/images/logo-myrror.png">
+  </div>
+
+  <div ngClass.gt-sm="login-signup-div" fxFlex *ngIf="loginForm; else signup">
+    <app-login (signupForm)="showSignupForm($event, false)"></app-login>
+  </div>
+  <ng-template #signup>
+    <div ngClass.gt-sm="login-signup-div" fxFlex>
+      <app-signup [isDeveloper]="developerSignUp" (loginForm)="showLoginForm($event)"></app-signup>
+    </div>
+  </ng-template>
+
+  <div fxFlex class="link-div">
+    <div fxLayout>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <i class="fa fa-github fa-2x" aria-hidden="true"></i>
+        <a mat-button href="https://github.com/swapUniba/Myrror">GitHub</a>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
+        <a mat-button [routerLink]="appRoutes.privacy">Privacy Policy</a>
+      </div>
+      <div fxLayout="column" fxLayoutAlign="center center">
+        <i class="fa fa-shield fa-2x" aria-hidden="true"></i>
+        <a mat-button (click)="showSignupForm($event, true)">Developers</a>
+      </div>
+    </div>
+  </div>
+
+</div>

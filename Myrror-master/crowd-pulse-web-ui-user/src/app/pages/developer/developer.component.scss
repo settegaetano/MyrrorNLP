@@ -1,0 +1,36 @@
+.larger-margin {
+ margin-left: 10%;
+ margin-right: 10%;
+}
+
+.endpoint-name {
+  width: 100%;
+  padding: 12px 20px;
+  font-family: "Courier New", sans-serif;
+  border: 2px solid rgba(74,74,74,0.50);
+  box-sizing:border-box;
+  border-radius: 4px;
+  background-color: rgba(74,74,74,0.50);
+  color: white;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+input[type=text], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid rgba(74,74,74,0.50);
+  box-sizing:border-box;
+  border-radius: 4px;
+  background-color: rgba(74,74,74,0.50);
+  color: white;
+  resize: none;
+}

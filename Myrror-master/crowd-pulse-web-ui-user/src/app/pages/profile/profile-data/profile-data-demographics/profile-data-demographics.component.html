@@ -1,0 +1,29 @@
+<div ngClass.gt-sm="main-content-page" *ngIf="dataSource && dataSource.data.length == 0; else demographicsTable">
+  <mat-card class="card-spacer">
+    <h2>Demographics</h2>
+    <p>Demographic data will be shown here.</p>
+  </mat-card>
+</div>
+
+<ng-template #demographicsTable>
+  <div ngClass.gt-sm="main-content-page">
+    <mat-card class="holistic-data-table">
+      <mat-card-title>Demographics</mat-card-title>
+      <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="dataName">
+          <mat-header-cell *cdkHeaderCellDef> Data </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.dataName | uppercase }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="dataValue">
+          <mat-header-cell *cdkHeaderCellDef> Value </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.dataValue }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </mat-card>
+  </div>
+</ng-template>
+

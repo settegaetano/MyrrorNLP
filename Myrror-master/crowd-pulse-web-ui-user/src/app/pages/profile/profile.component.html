@@ -1,0 +1,29 @@
+<div fxLayout="column" class="page-title-header profile-page-header">
+
+  <div fxLayout="row" fxLayoutAlign="start center" class="profile-userinfo-div">
+    <img class="user-image" src="{{userImage}}">
+    <div fxLayout="column">
+      <h1 *ngIf="user">{{user.username | uppercase}}</h1>
+    </div>
+  </div>
+
+  <div fxLayout="row">
+    <nav class="margin-top" mat-tab-nav-bar>
+      <a mat-tab-link
+         *ngFor="let item of profileTabItems"
+         [routerLink]="item.path"
+         routerLinkActive #rla="routerLinkActive"
+         [active]="rla.isActive">
+        <i class="{{item.icon}}" aria-hidden="true"></i>
+        &nbsp;
+        <div ngClass.lt-sm="show-text">
+          {{item.name | uppercase }}
+        </div>
+      </a>
+    </nav>
+  </div>
+
+</div>
+
+<router-outlet></router-outlet>
+

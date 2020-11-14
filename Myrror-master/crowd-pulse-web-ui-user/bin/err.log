@@ -1,0 +1,1806 @@
+ERROR { Error: Uncaught (in promise): ReferenceError: document is not defined
+ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:821:31)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:785:17)
+    at /home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:870:17
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Object.onInvokeTask (/home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:4783:33)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:420:36)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at drainMicroTaskQueue (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:594:35)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:499:21)
+    at ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+  rejection: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: undefined,
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+ERROR { Error: Uncaught (in promise): ReferenceError: document is not defined
+ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:821:31)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:785:17)
+    at /home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:870:17
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Object.onInvokeTask (/home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:4783:33)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:420:36)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at drainMicroTaskQueue (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:594:35)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:499:21)
+    at ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+  rejection: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: undefined,
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+ERROR { Error: Uncaught (in promise): ReferenceError: document is not defined
+ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:821:31)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:785:17)
+    at /home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:870:17
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Object.onInvokeTask (/home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:4783:33)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:420:36)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at drainMicroTaskQueue (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:594:35)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:499:21)
+    at ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+  rejection: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: undefined,
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+ERROR { Error: Uncaught (in promise): ReferenceError: document is not defined
+ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:821:31)
+    at resolvePromise (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:785:17)
+    at /home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:870:17
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Object.onInvokeTask (/home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:4783:33)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:420:36)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at drainMicroTaskQueue (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:594:35)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:499:21)
+    at ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+  rejection: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26),
+  promise: 
+   ZoneAwarePromise {
+     __zone_symbol__state: 0,
+     __zone_symbol__value: ReferenceError: document is not defined
+    at Overlay._createPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:151:20)
+    at Overlay.getPaneElement (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:146:54)
+    at Overlay.create (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:141:44)
+    at ToastrService._buildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:422:39)
+    at ToastrService._preBuildNotification (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:404:21)
+    at ToastrService.error (/home/crowd-pulse-web-ui-user/node_modules/ngx-toastr/toastr.umd.js:333:21)
+    at SafeSubscriber._error (/home/crowd-pulse-web-ui-user/dist-server/main.bundle.js:1:768693)
+    at SafeSubscriber.__tryOrSetError (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:248:16)
+    at SafeSubscriber.error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:202:26)
+    at Subscriber._error (/home/crowd-pulse-web-ui-user/node_modules/rxjs/Subscriber.js:129:26) },
+  zone: 
+   Zone {
+     _properties: { isAngularZone: true },
+     _parent: 
+      Zone {
+        _properties: {},
+        _parent: null,
+        _name: '<root>',
+        _zoneDelegate: [Object] },
+     _name: 'angular',
+     _zoneDelegate: 
+      ZoneDelegate {
+        _taskCounts: [Object],
+        zone: [Circular],
+        _parentDelegate: [Object],
+        _forkZS: null,
+        _forkDlgt: null,
+        _forkCurrZone: [Object],
+        _interceptZS: null,
+        _interceptDlgt: null,
+        _interceptCurrZone: [Object],
+        _invokeZS: [Object],
+        _invokeDlgt: [Object],
+        _invokeCurrZone: [Circular],
+        _handleErrorZS: [Object],
+        _handleErrorDlgt: [Object],
+        _handleErrorCurrZone: [Circular],
+        _scheduleTaskZS: [Object],
+        _scheduleTaskDlgt: [Object],
+        _scheduleTaskCurrZone: [Circular],
+        _invokeTaskZS: [Object],
+        _invokeTaskDlgt: [Object],
+        _invokeTaskCurrZone: [Circular],
+        _cancelTaskZS: [Object],
+        _cancelTaskDlgt: [Object],
+        _cancelTaskCurrZone: [Circular],
+        _hasTaskZS: [Object],
+        _hasTaskDlgt: [Object],
+        _hasTaskDlgtOwner: [Circular],
+        _hasTaskCurrZone: [Circular] } },
+  task: 
+   ZoneTask {
+     _zone: 
+      Zone {
+        _properties: [Object],
+        _parent: [Object],
+        _name: 'angular',
+        _zoneDelegate: [Object] },
+     runCount: 0,
+     _zoneDelegates: null,
+     _state: 'notScheduled',
+     type: 'microTask',
+     source: 'Promise.then',
+     data: undefined,
+     scheduleFn: undefined,
+     cancelFn: null,
+     callback: [Function],
+     invoke: [Function] } }
+Error: Failed to lookup view "index" in views directory "../dist"
+    at Function.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/response.js:1008:7)
+    at angularRouter (/home/crowd-pulse-web-ui-user/bin/crowd-pulse-web-ui-user.js:24:7)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at /home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:275:10)
+Error: Failed to lookup view "index" in views directory "../dist"
+    at Function.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/response.js:1008:7)
+    at angularRouter (/home/crowd-pulse-web-ui-user/bin/crowd-pulse-web-ui-user.js:24:7)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at /home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:275:10)
+Error: Failed to lookup view "index" in views directory "../dist"
+    at Function.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/response.js:1008:7)
+    at angularRouter (/home/crowd-pulse-web-ui-user/bin/crowd-pulse-web-ui-user.js:24:7)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at /home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:275:10)
+Error: Failed to lookup view "index" in views directory "../dist"
+    at Function.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/response.js:1008:7)
+    at angularRouter (/home/crowd-pulse-web-ui-user/bin/crowd-pulse-web-ui-user.js:24:7)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at /home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:275:10)
+Error: Failed to lookup view "index" in views directory "../dist"
+    at Function.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/response.js:1008:7)
+    at angularRouter (/home/crowd-pulse-web-ui-user/bin/crowd-pulse-web-ui-user.js:24:7)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at /home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:281:22
+    at param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:365:14)
+Error: Failed to lookup view "index" in views directory "../dist"
+    at Function.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/response.js:1008:7)
+    at angularRouter (/home/crowd-pulse-web-ui-user/bin/crowd-pulse-web-ui-user.js:24:7)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at /home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:335:12)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:275:10)
+Error: Failed to lookup view "index" in views directory "../dist"
+    at Function.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/application.js:580:17)
+    at ServerResponse.render (/home/crowd-pulse-web-ui-user/node_modules/express/lib/response.js:1008:7)
+    at angularRouter (/home/crowd-pulse-web-ui-user/bin/crowd-pulse-web-ui-user.js:24:7)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:95:5)
+    at /home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:281:22
+    at param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:354:14)
+    at param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:365:14)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: Failed to decode param '/%80../%80../%80../%80../%80../%80../%80../%80../boot.ini'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%NETHOOD%/'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+URIError: Failed to decode param '/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/%c0%ae%c0%ae/etc/passwd'
+    at decodeURIComponent (<anonymous>)
+    at decode_param (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:172:12)
+    at Layer.match (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/layer.js:123:27)
+    at matchLayer (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:574:18)
+    at next (/home/crowd-pulse-web-ui-user/node_modules/express/lib/router/index.js:220:15)
+    at SendStream.error (/home/crowd-pulse-web-ui-user/node_modules/serve-static/index.js:121:7)
+    at ZoneDelegate.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:421:31)
+    at Zone.runTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:188:47)
+    at ZoneTask.invokeTask (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:495:34)
+    at SendStream.ZoneTask.invoke (/home/crowd-pulse-web-ui-user/node_modules/zone.js/dist/zone-node.js:484:48)
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+ERROR URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56
+URIError: URI malformed
+    at decodeURIComponent (<anonymous>)
+    at decode (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1312:12)
+    at UrlParser.parseQueryParam (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1517:43)
+    at UrlParser.parseQueryParams (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1396:22)
+    at DefaultUrlSerializer.parse (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:1226:52)
+    at Router.parseUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5210:48)
+    at Router.navigateByUrl (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:5109:76)
+    at Router.initialNavigation (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:4759:18)
+    at RouterInitializer.bootstrapListener (/home/crowd-pulse-web-ui-user/node_modules/@angular/router/bundles/router.umd.js:7308:20)
+    at /home/crowd-pulse-web-ui-user/node_modules/@angular/core/bundles/core.umd.js:6017:56

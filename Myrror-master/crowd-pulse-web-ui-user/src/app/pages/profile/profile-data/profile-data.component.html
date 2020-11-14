@@ -1,0 +1,180 @@
+<mat-sidenav-container class="profile-data-sidenav-container">
+  <mat-sidenav [mode]="'side'" opened="true"
+               class="profile-data-sidenav mat-elevation-z3"
+               ngClass.lt-sm="profile-data-sidenav-small mat-elevation-z3">
+
+    <mat-nav-list>
+      <nav>
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.demographics }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-address-card fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Demographics
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.interest }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-thumbs-up fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Interests
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.affects }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-smile-o fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Affects
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.cognitiveAspects }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-lightbulb-o fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Psychol. Aspects
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.behavior }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-child fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Behaviors
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.socialRelations }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-users fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Social Relations
+        </span>
+        </a>
+
+        <a mat-list-item [routerLink]="" [queryParams]="{ show: appRoutes.profile.physicalState }"
+           routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-heart fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Physical States
+        </span>
+        </a>
+      </nav>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <div *ngIf="routedPage.url == rootPage; else showSubPages" class="main-content-page">
+      <h2>Your Bio</h2>
+
+      <div *ngIf="user && user.demographics; else noContent">
+        <p>
+          Hi<span *ngIf="bioFields.name"> {{ bioFields.name }}</span>,
+          this is a brief bio we automatically built for you.
+        </p>
+
+        <p>
+          <span *ngIf="bioFields.gender && bioFields.language && bioFields.industry; else singleSentence">
+            <span *ngIf="bioFields.gender">You are {{ bioFields.gender }}, </span>
+            <span *ngIf="bioFields.language">you speak {{ bioFields.language }}</span>
+            <span *ngIf="bioFields.industry">and you work in {{ bioFields.industry }}</span>.
+          </span>
+
+          <ng-template #singleSentence>
+            <span *ngIf="bioFields.gender">You are {{ bioFields.gender }}.</span>
+            <span *ngIf="bioFields.language">You speak {{ bioFields.language }}.</span>
+            <span *ngIf="bioFields.industry">You work in {{ bioFields.industry }}.</span>
+          </ng-template>
+
+          <span *ngIf="bioFields.location">
+            <span *ngIf="bioFields.gender || bioFields.language || bioFields.industry; else noMoreover">
+              Moreover, it seems that your last location is {{ bioFields.location }}.
+            </span>
+            <ng-template #noMoreover>
+              It seems that your last location is {{ bioFields.location }}.
+            </ng-template>
+          </span>
+
+          <span *ngIf="bioFields.email">
+            <span *ngIf="bioFields.email.number == 1">Your email is {{ bioFields.email.value }}.</span>
+            <span *ngIf="bioFields.email.number > 1">Your emails are {{ bioFields.email.value }}.</span>
+          </span>
+        </p>
+
+        <p>
+          <span *ngIf="bioFields.interests">
+            You recent interests regard {{ bioFields.interests }}.
+          </span>
+
+          <span *ngIf="bioFields.emotion">
+            From the last posts you wrote, you looked {{ bioFields.emotion }}.
+          </span>
+
+          <span *ngIf="bioFields.sentiment">
+            Your recent mood was {{ bioFields.sentiment }}.
+          </span>
+          <span *ngIf="bioFields.activity"><br> {{ bioFields.activity }} </span>
+          <span *ngIf="bioFields.physicalActivity"> {{ bioFields.physicalActivity }} </span>
+          <span *ngIf="bioFields.sleep"> {{ bioFields.sleep }} </span>
+          <span *ngIf="bioFields.heart"> {{ bioFields.heart }} </span>
+          <span *ngIf="bioFields.weight"> {{ bioFields.weight }} </span>
+        </p>
+
+        <p>
+          <span *ngIf="bioFields.personality">
+            The main personality traits emerging from your profile are {{ bioFields.personality }}.
+          </span>
+          <span *ngIf="bioFields.empathy">
+            Your level of empathy is {{ bioFields.empathy }}.
+          </span>
+        </p>
+
+        <p>
+          <span *ngIf="bioFields.socialRelations">
+            You currently have {{ bioFields.socialRelations }}.
+          </span>
+        </p>
+
+      </div>
+
+      <ng-template #noContent>
+        <p>No data available yet.</p>
+      </ng-template>
+    </div>
+
+    <!-- holistic profile fields sub-pages -->
+    <ng-template #showSubPages>
+      <div *ngIf="selected === appRoutes.profile.demographics">
+        <app-profile-demographics [user]="user"></app-profile-demographics>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.interest">
+        <app-profile-interests [user]="user"></app-profile-interests>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.affects">
+        <app-profile-affects [user]="user"></app-profile-affects>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.cognitiveAspects">
+        <app-profile-cognitive-aspects [user]="user"></app-profile-cognitive-aspects>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.behavior">
+        <app-profile-behavior [user]="user"></app-profile-behavior>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.physicalState">
+        <app-profile-physical-state [user]="user"></app-profile-physical-state>
+      </div>
+
+      <div *ngIf="selected === appRoutes.profile.socialRelations">
+        <app-profile-social-relations [user]="user"></app-profile-social-relations>
+      </div>
+    </ng-template>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

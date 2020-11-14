@@ -1,0 +1,9 @@
+Connessione a mongodb tramite Compass
+mongodb://localhost/admin
+
+Facebook Authentication
+1)Registrarsi a facebook for developers
+2)Creare app
+3)Prendere id app e id secret e metterle nel server in facebook.js
+
+Non usare forever! Usare node...

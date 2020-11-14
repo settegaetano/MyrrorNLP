@@ -1,0 +1,166 @@
+<mat-sidenav-container class="identities-sidenav-container">
+  <mat-sidenav [mode]="'side'" opened="true"
+               class="identities-sidenav mat-elevation-z3"
+               ngClass.lt-sm="identities-sidenav-small mat-elevation-z3"
+               >
+
+    <mat-nav-list>
+
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <img fxFlex [routerLink]="appRoutes.identities.root" class="user-image" ngClass.lt-sm="user-image-small"
+             src="{{userImage}}">
+      </div>
+
+      <nav>
+        <!-- social -->
+        <a mat-list-item [routerLink]="appRoutes.identities.twitter" routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-twitter fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Twitter
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="appRoutes.identities.facebook" routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-facebook fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Facebook
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="appRoutes.identities.linkedin" routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-linkedin fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> LinkedIn
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="appRoutes.identities.instagram" routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-instagram fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Instagram
+          </span>
+        </a>
+      </nav>
+
+      <nav>
+        <!-- devices -->
+        <a mat-list-item [routerLink]="appRoutes.identities.android" routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-android fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Android
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="appRoutes.identities.fitbit" routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-heartbeat fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> Fitbit
+          </span>
+        </a>
+        <a mat-list-item [routerLink]="appRoutes.identities.telegram" routerLinkActive #rla="routerLinkActive">
+          <i class="fa fa-medkit fa-fw fa-1x" aria-hidden="true"></i>
+          <span fxHide.lt-sm>
+            <span class="spacer"></span> HealthAssistant
+          </span>
+        </a>
+      </nav>
+
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="identities-sidenav-content" fxLayout="column">
+
+    <!-- main content -->
+    <div fxLayout="column" *ngIf="routedPage.url == rootPage">
+      <div fxLayout="row" fxLayoutAlign="start center" class="page-title-header">
+        <h1>Identities</h1>
+      </div>
+
+      <div ngClass.gt-sm="main-content-page" *ngIf="user">
+        <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutWrap="row" *ngIf="!noIdentitiesLinked; else noIdentities">
+
+          <mat-card fxFlex="30" fxFlex.lt-md="100" class="identities-card" *ngIf="user.identities.twitter">
+            <mat-card-title>Twitter</mat-card-title>
+            <div fxLayout fxLayoutAlign="start center">
+              <img class="identities-user-image" src="{{user.identities.twitter.profile_image_url}}">
+              <div>
+                <button mat-raised-button color="primary" [routerLink]="appRoutes.identities.twitter">Settings</button>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card fxFlex="30" fxFlex.lt-md="100" class="identities-card" *ngIf="user.identities.facebook">
+            <mat-card-title>Facebook</mat-card-title>
+            <div fxLayout fxLayoutAlign="start center">
+              <img class="identities-user-image" src="{{user.identities.facebook.picture}}">
+              <div>
+                <button mat-raised-button color="primary" [routerLink]="appRoutes.identities.facebook">Settings</button>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card fxFlex="30" fxFlex.lt-md="100" class="identities-card" *ngIf="user.identities.instagram">
+            <mat-card-title>Instagram</mat-card-title>
+            <div fxLayout fxLayoutAlign="start center">
+              <img class="identities-user-image" src="{{user.identities.instagram.picture}}">
+              <div>
+                <button mat-raised-button color="primary" [routerLink]="appRoutes.identities.instagram">Settings</button>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card fxFlex="30" fxFlex.lt-md="100" class="identities-card" *ngIf="user.identities.fitbit">
+            <mat-card-title>Fitbit</mat-card-title>
+            <div fxLayout fxLayoutAlign="start center">
+              <img class="identities-user-image" src="{{user.identities.fitbit.avatar}}">
+              <div>
+                <button mat-raised-button color="primary" [routerLink]="appRoutes.identities.fitbit">Settings</button>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card fxFlex="30" fxFlex.lt-md="100" class="identities-card" *ngIf="user.identities.linkedIn">
+            <mat-card-title>LinkedIn</mat-card-title>
+            <div fxLayout fxLayoutAlign="start center">
+              <img class="identities-user-image" src="{{user.identities.linkedIn.pictureUrl}}">
+              <div>
+                <button mat-raised-button color="primary" [routerLink]="appRoutes.identities.linkedin">Settings</button>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card fxFlex="30" fxFlex.lt-md="100" class="identities-card" *ngIf="user.identities.telegram">
+            <mat-card-title>HealthAssistant</mat-card-title>
+            <div fxLayout fxLayoutAlign="start center">
+              <img class="identities-user-image" src="{{telegramImage}}">
+              <div>
+                <button mat-raised-button color="primary" [routerLink]="appRoutes.identities.telegram">Settings</button>
+              </div>
+            </div>
+          </mat-card>
+
+          <mat-card fxFlex="30" fxFlex.lt-md="100" *ngFor="let device of user.identities.devices" class="identities-card">
+            <mat-card-title>Device Android</mat-card-title>
+            <div fxLayout fxLayoutAlign="start center">
+              <span class="fa fa-android fa-fw fa-5x identities-user-image" aria-hidden="true"></span>
+              <div>
+                <p>{{ device.brand }} - {{ device.model }} - ID: {{ device.deviceId }}</p>
+                <button mat-raised-button color="primary" [routerLink]="appRoutes.identities.android"
+                        [queryParams]="{deviceId:  device.deviceId}">Settings</button>
+              </div>
+            </div>
+          </mat-card>
+
+        </div>
+
+        <ng-template #noIdentities>
+          <div class="main-content-page">
+            <h2>No Identities Linked</h2>
+          </div>
+        </ng-template>
+
+      </div>
+
+    </div>
+
+    <!-- identities sub-pages -->
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

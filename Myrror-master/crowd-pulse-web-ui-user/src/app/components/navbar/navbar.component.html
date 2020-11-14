@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="mat-elevation-z6 app-navbar">
+
+
+  <span><img height="34px" fxLayout fxLayoutAlign="center center" src="assets/images/logo-myrror-simple.png"></span>
+  <!--
+  <span>{{appName}}</span>
+  -->
+  <span class="spacer"></span>
+  <div fxLayout.gt-xs="row">
+
+    <div fxHide.lt-sm="row">
+      <span *ngIf="!isDeveloper">
+        <a *ngFor="let item of navbarItems" mat-button [routerLink]="item.path" routerLinkActive #rla="routerLinkActive">
+          {{item.name}}
+        </a>
+      </span>
+      <a mat-button (click)="logout()">Logout</a>
+    </div>
+
+    <!-- menu visible on mobile devices -->
+    <div fxShow="false" fxShow.lt-sm="column">
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu fxLayout="column" #menu="matMenu">
+        <span *ngIf="!isDeveloper">
+          <button mat-menu-item *ngFor="let item of navbarItems" (click)="router.navigateByUrl(item.path)">{{item.name}}</button>
+        </span>
+        <button mat-menu-item (click)="logout()">Logout</button>
+      </mat-menu>
+    </div>
+
+  </div>
+</mat-toolbar>
+
+

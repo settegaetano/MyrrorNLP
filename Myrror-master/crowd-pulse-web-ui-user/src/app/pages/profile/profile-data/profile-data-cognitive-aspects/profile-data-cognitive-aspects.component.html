@@ -1,0 +1,40 @@
+<div ngClass.gt-sm="main-content-page">
+  <mat-card *ngIf="!dataSource; else showTable" class="card-spacer">
+    <h2>Personality</h2>
+    <p>Data not available.</p>
+  </mat-card>
+
+  <ng-template #showTable>
+    <mat-card class="holistic-data-table">
+      <mat-card-title>Personality</mat-card-title>
+      <mat-table #table [dataSource]="dataSource">
+        <ng-container matColumnDef="dataName">
+          <mat-header-cell *cdkHeaderCellDef> Data </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.dataName | uppercase }} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="dataValue">
+          <mat-header-cell *cdkHeaderCellDef> Value </mat-header-cell>
+          <mat-cell *matCellDef="let element" ngClass.lt-sm="text-alignment"> {{element.dataValue }} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </mat-card>
+  </ng-template>
+
+  <mat-card *ngIf="empathy; else noEmpathy">
+    <mat-card-title>Empathy</mat-card-title>
+    <p>Your empathy is {{empathy | uppercase }}</p>
+  </mat-card>
+
+  <ng-template #noEmpathy>
+    <mat-card>
+      <mat-card-title>Empathy</mat-card-title>
+      <p>Data not available.</p>
+    </mat-card>
+  </ng-template>
+</div>
+
+

@@ -1,0 +1,37 @@
+<mat-card class="signup-card">
+
+  <mat-card-title>Sign Up <span *ngIf="isDeveloper"> - Developers</span></mat-card-title>
+
+  <mat-card-content>
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="username" type="text" placeholder="Username" maxlength="20" required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="email" type="text" placeholder="Email" maxlength="35" required>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="isDeveloper" class="full-width">
+      <textarea matInput [(ngModel)]="applicationDescription" type="text" rows="4" placeholder="Describe Application"
+                maxlength="240" required>
+      </textarea>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="password" type="password" placeholder="Password" maxlength="20" required>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput [(ngModel)]="confirmPassword" type="password" placeholder="Confirm Password" maxlength="20" required>
+    </mat-form-field>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div fxLayoutAlign="center center">
+      <button mat-raised-button (click)="signUp()" color="primary">Register</button>
+      <button mat-raised-button (click)="showLoginForm()">Go to Login</button>
+    </div>
+  </mat-card-actions>
+
+</mat-card>
+

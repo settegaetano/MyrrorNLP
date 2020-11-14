@@ -1,0 +1,50 @@
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\lib\app.js:166:14
+    at _fulfilled (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:854:54)
+    at C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:883:30
+    at Promise.promise.promiseDispatch (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:816:13)
+    at C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:624:44
+    at runSingle (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:137:13)
+    at flush (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:125:13)
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::5000
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\lib\app.js:166:14
+    at _fulfilled (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:854:54)
+    at C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:883:30
+    at Promise.promise.promiseDispatch (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:816:13)
+    at C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:624:44
+    at runSingle (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:137:13)
+    at flush (C:\Users\seven\Desktop\Progetto NLP\Myrror-master\crowd-pulse-web-service\node_modules\q\q.js:125:13)
+    at processTicksAndRejections (internal/process/task_queues.js:75:11)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 5000
+}

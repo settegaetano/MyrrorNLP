@@ -1,0 +1,303 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="page-title-header" xmlns="http://www.w3.org/1999/html">
+  <i class="fa fa-medkit fa-4x" aria-hidden="true"></i>
+</div>
+
+<div class="main-content-page" fxLayout="row" fxLayoutAlign="center center" *ngIf="loading; else content">
+  <mat-spinner></mat-spinner>
+</div>
+
+<ng-template #content>
+  <div class="main-content-page"  *ngIf="!user || !user.identities || !user.identities.telegram; else telegramData">
+    <h2>No Linked Account</h2>
+    <p>By linking your Telegram account, you agree that {{appName}} will be able to read basic information saved
+      in HealthassistantBot. To link your account insert your telegram username in the form below then click on "Link Account"</p>
+
+      <form>
+        <input (input)="onUpdateUserName($event)" type="text"  class="form-control telegram-username-input" placeholder="Enter here your Telegram username">
+      </form>
+    <button mat-raised-button (click)="associate()" color="primary" class="telegram-button">Link Account</button>
+  </div>
+</ng-template>
+
+  <ng-template #telegramData>
+    <div ngClass.gt-sm="main-content-page">
+      <h1 fxHide.lt-sm fxHide.sm>Telegram Account</h1>
+
+      <div class="fitbit-actions-div" fxLayout fxLayoutAlign="center center" fxLayoutAlign.gt-sm="end center">
+        <div fxFlex fxFlex.gt-sm="80" fxLayout fxLayoutAlign="start center" fxLayoutWrap fxLayout.lt-md="column">
+          <mat-slide-toggle fxFlex [(ngModel)]="shareTherapy" (change)="updateShareTherapy()">Share Therapies</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareAnalysis" (change)="updateShareAnalysis()">Share Analyses</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareMedicalArea" (change)="updateShareMedicalArea()">Share Medical Areas</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareDiagnosis" (change)="updateShareDiagnosis()">Share Diagnoses</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareMedicalVisit" (change)="updateShareMedicalVisit()">Share Medical Visits</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareDisease" (change)="updateShareDisease()">Share Diseases</mat-slide-toggle>
+          <mat-slide-toggle fxFlex [(ngModel)]="shareHospitalization" (change)="updateShareHospitalization()">Share Hospitalization</mat-slide-toggle>
+        </div>
+        <span fxFlex.gt-sm="5"></span>
+        <button fxFlex="90" fxFlex.gt-sm="25" mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
+      </div>
+
+      <div class="fitbit-actions-div" fxLayout fxLayoutAlign="center center" fxLayoutAlign.gt-sm="end center">
+        <span fxFlex.gt-sm="5"></span>
+      </div>
+</div>
+<mat-card class="fitbit-card">
+  <mat-card-title>Profile Data</mat-card-title>
+  <mat-table #table [dataSource]="dataSource">
+    <ng-container matColumnDef="dataName">
+      <mat-header-cell *cdkHeaderCellDef> Data </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.dataName | uppercase }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="dataValue">
+      <mat-header-cell *cdkHeaderCellDef> Value </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.dataValue }} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+  <br>
+  <button mat-raised-button color="primary" (click)="updateProfile()">
+    <mat-icon aria-label="get_data">cached</mat-icon>
+    Update Profile
+  </button>
+</mat-card>
+
+
+
+
+<div fxLayout="row" fxLayoutAlign="space-between start" fxLayoutWrap>
+
+  
+  <mat-card fxFlex="50" fxFlex.lt-md="100" fxLayoutAlign="center center" class="facebook-card"
+            *ngIf="loadingDiagnoses; else postsCard">
+    <mat-spinner></mat-spinner>
+  </mat-card>
+  <ng-template #postsCard>
+    <mat-card fxFlex="50" fxFlex.lt-md="100" class="facebook-card">
+      <div *ngIf="diagnoses.length > 0; else noPosts">
+        <mat-card-title>Your last Diagnoses</mat-card-title>
+        <div class="post-like-div" *ngFor="let post of diagnoses">
+          <p *ngIf="post.diagnosis_name">Diagnosys Name: {{ post.diagnosis_name }}</p>
+          <p *ngIf="post.diagnosis_accuracy">Diagnosis Accuracy: {{ post.diagnosis_accuracy }} </p>
+          <mat-divider></mat-divider>
+        </div>
+        <button mat-raised-button color="primary" (click)="updateDiagnoses(true, 5)">
+          <mat-icon aria-label="get_data">cached</mat-icon>
+          Update Diagnoses
+        </button>
+      </div>
+      <ng-template #noPosts>
+        <mat-card-title>No Diagnoses Acquired</mat-card-title>
+        <mat-card-content>
+          In this section will be shown your Diagnoses.
+        </mat-card-content>
+        <button mat-raised-button color="primary" (click)="updateDiagnoses(true, 5)">
+          <mat-icon aria-label="get_data">get_app</mat-icon>
+          Get Diagnoses
+        </button>
+      </ng-template>
+
+    </mat-card>
+  </ng-template>
+
+
+          <mat-card fxFlex="48" fxFlex.lt-md="100" fxLayoutAlign="center center" class="facebook-card"
+                  *ngIf="loadingAnalyses; else analysesCard">
+          <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #analysesCard>
+          <mat-card fxFlex="48" fxFlex.lt-md="100" class="facebook-card">
+            <div *ngIf="analyses.length > 0; else noanalyses">
+              <mat-card-title>Your last Analyses</mat-card-title>
+              <div class="post-like-div" *ngFor="let analysis of analyses">
+                <p>Analysis name: {{ analysis.analysisName }}</p>
+                <p>result: {{ analysis.result }} {{analysis.unit}}</p>
+                <mat-divider></mat-divider>
+              </div>
+              <button mat-raised-button color="primary" (click)="updateAnalyses(true, 5 )">
+                <mat-icon aria-label="get_data">cached</mat-icon>
+                Update analyses
+              </button>
+            </div>
+            <ng-template #noanalyses>
+              <mat-card-title>No Analyses Acquired</mat-card-title>
+              <mat-card-content>
+                In this section will be shown the analyses related to your account.
+              </mat-card-content>
+              <button mat-raised-button color="primary" (click)="updateAnalyses(true, 5)">
+                <mat-icon aria-label="get_data">get_app</mat-icon>
+                Get analyses
+              </button>
+            </ng-template>
+          </mat-card>
+        </ng-template>
+
+        <mat-card fxFlex="48" fxFlex.lt-md="100" fxLayoutAlign="center center" class="facebook-card"
+                *ngIf="loadingTherapies; else therapiesCard">
+        <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #therapiesCard>
+        <mat-card fxFlex="48" fxFlex.lt-md="100" class="facebook-card">
+          <div *ngIf="therapies.length > 0; else noTherapies">
+            <mat-card-title>Your Therapies</mat-card-title>
+            <div class="post-like-div" *ngFor="let therapy of therapies">
+              <p>Therapy Name: {{ therapy.therapyName }}</p>
+              <p>Drug name: {{ therapy.drug_name }}</p>
+              <p>Dosage: {{ therapy.dosage }}</p>
+              <mat-divider></mat-divider>
+            </div>          
+            <button mat-raised-button color="primary" (click)="updateTherapies(true, 5)">
+              <mat-icon aria-label="get_data">cached</mat-icon>
+              Update Therapies
+            </button>
+          </div>
+          <ng-template #noTherapies>
+            <mat-card-title>No Therapies Acquired</mat-card-title>
+            <mat-card-content>
+              In this section will be shown your therapies.
+            </mat-card-content>
+            <button mat-raised-button color="primary" (click)="updateTherapies(true, 5)">
+              <mat-icon aria-label="get_data">get_app</mat-icon>
+              Get Therapies
+            </button>
+          </ng-template>
+        </mat-card>
+        </ng-template>
+
+        
+        <mat-card fxFlex="48" fxFlex.lt-md="100" fxLayoutAlign="center center" class="facebook-card"
+        *ngIf="loadingMedicalArea; else friendsCard">
+        <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #friendsCard>
+        <mat-card fxFlex="48" fxFlex.lt-md="100" class="facebook-card">
+          <div *ngIf="medicalArea.length > 0; else noFriends">
+            <mat-card-title>Your Medical Areas searched</mat-card-title>
+            <div class="post-like-div" *ngFor="let ma of medicalArea">
+              <p>Medical Area: {{ ma.medicalArea }}</p>
+              <mat-divider></mat-divider>
+            </div>
+            <button mat-raised-button color="primary" (click)="updateMedicalArea(true, 5)">
+              <mat-icon aria-label="get_data">cached</mat-icon>
+              Update Medical Area
+            </button>
+          </div>
+          <ng-template #noFriends>
+            <mat-card-title>No Medical Area Acquired</mat-card-title>
+            <mat-card-content>
+              In this section will be shown your medical area searched in HealthassistantBot.
+            </mat-card-content>
+            <button mat-raised-button color="primary" (click)="updateMedicalArea(true, 5)">
+              <mat-icon aria-label="get_data">get_app</mat-icon>
+              Get Medical Area
+            </button>
+          </ng-template>
+        </mat-card>
+        </ng-template>
+
+
+        <mat-card fxFlex="48" fxFlex.lt-md="100" fxLayoutAlign="center center" class="facebook-card"
+                *ngIf="loadingMedicalVisit; else medicalVisitCard">
+        <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #medicalVisitCard>
+        <mat-card fxFlex="48" fxFlex.lt-md="100" class="facebook-card">
+          <div *ngIf="medicalVisit.length > 0; else noMedicalVisit">
+            <mat-card-title>Your Medical Visits</mat-card-title>
+            <div class="post-like-div" *ngFor="let mv of medicalVisit">
+              <p>Medical Visit Name: {{ mv.nameVisit }}</p>
+              <p>Name Facility: {{ mv.nameFacility }}</p>
+              <p>Diagnosis: {{ mv.diagnosis }}</p>
+              <p>Medical Prescription: {{ mv.medicalPrescription }}</p>
+              <mat-divider></mat-divider>
+            </div>          
+            <button mat-raised-button color="primary" (click)="updateMedicalVisit(true, 5)">
+              <mat-icon aria-label="get_data">cached</mat-icon>
+              Update Medical Visits
+            </button>
+          </div>
+          <ng-template #noMedicalVisit>
+            <mat-card-title>No Medical Visits Acquired</mat-card-title>
+            <mat-card-content>
+              In this section will be shown your medical visits.
+            </mat-card-content>
+            <button mat-raised-button color="primary" (click)="updateMedicalVisit(true, 5)">
+              <mat-icon aria-label="get_data">get_app</mat-icon>
+              Get Medical visits
+            </button>
+          </ng-template>
+        </mat-card>
+        </ng-template>
+
+
+        <mat-card fxFlex="48" fxFlex.lt-md="100" fxLayoutAlign="center center" class="facebook-card"
+                *ngIf="loadingDisease; else diseaseCard">
+        <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #diseaseCard>
+        <mat-card fxFlex="48" fxFlex.lt-md="100" class="facebook-card">
+          <div *ngIf="disease.length > 0; else noDisease">
+            <mat-card-title>Your Diseases</mat-card-title>
+            <div class="post-like-div" *ngFor="let di of disease">
+              <p>Name Disease: {{ di.nameDisease }}</p>
+              <p>Place Diagnosy: {{ di.placeDiagnosis }}</p>
+              <p>Complete Diagnosy: {{ di.completeDiagnosis }}</p>
+              <mat-divider></mat-divider>
+            </div>          
+            <button mat-raised-button color="primary" (click)="updateDisease(true, 5)">
+              <mat-icon aria-label="get_data">cached</mat-icon>
+              Update Diseases
+            </button>
+          </div>
+          <ng-template #noDisease>
+            <mat-card-title>No Diseases Acquired</mat-card-title>
+            <mat-card-content>
+              In this section will be shown your disease.
+            </mat-card-content>
+            <button mat-raised-button color="primary" (click)="updateDisease(true, 5)">
+              <mat-icon aria-label="get_data">get_app</mat-icon>
+              Get Diseases
+            </button>
+          </ng-template>
+        </mat-card>
+        </ng-template>
+
+
+
+        <mat-card fxFlex="48" fxFlex.lt-md="100" fxLayoutAlign="center center" class="facebook-card"
+                *ngIf="loadingHospitalization; else hospitalizationCard">
+        <mat-spinner></mat-spinner>
+        </mat-card>
+        <ng-template #hospitalizationCard>
+        <mat-card fxFlex="48" fxFlex.lt-md="100" class="facebook-card">
+          <div *ngIf="hospitalization.length > 0; else noHospitalization">
+            <mat-card-title>Your Hospitalizations</mat-card-title>
+            <div class="post-like-div" *ngFor="let h of hospitalization">
+              <p>Name Hospitalization: {{ h.name }}</p>
+              <p>Hospital Ward: {{ h.hospitalWard }}</p>
+              <p>Diagnosis: {{ h.diagnosisHospitalization }}</p>
+              <mat-divider></mat-divider>
+            </div>          
+            <button mat-raised-button color="primary" (click)="updateHospitalization(true, 5)">
+              <mat-icon aria-label="get_data">cached</mat-icon>
+              Update Hospitalizations
+            </button>
+          </div>
+          <ng-template #noHospitalization>
+            <mat-card-title>No Hospitalization Acquired</mat-card-title>
+            <mat-card-content>
+              In this section will be shown your hospitalizations.
+            </mat-card-content>
+            <button mat-raised-button color="primary" (click)="updateHospitalization(true, 5)">
+              <mat-icon aria-label="get_data">get_app</mat-icon>
+              Get Hospitalizations
+            </button>
+          </ng-template>
+        </mat-card>
+        </ng-template>
+
+      
+</div>

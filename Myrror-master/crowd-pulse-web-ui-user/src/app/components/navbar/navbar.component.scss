@@ -1,0 +1,17 @@
+@import "../../../styles.scss";
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.app-navbar {
+  height: $navbar-height !important;
+  max-height: $navbar-height !important;
+  z-index: 3;
+  position: relative;
+}
+
+.navbar-logo {
+  margin-top: auto;
+}
+

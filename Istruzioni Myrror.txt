@@ -1,0 +1,22 @@
+Scegliere se fare:
+Andare nella cartella del web-service
+1)npm install forever -g
+Andare nel bin del web-service
+2)forever start -l ./forever.log -a -o ./out.log -e ./err.log crowd-pulse-web-service.js
+
+Oppure
+Andare nella cartella del web-service
+1)npm install
+2)node ./bin/crowd-pulse-web-service.js
+
+
+Poi successivamente:
+Andare nella cartella del web-ui-user
+Installare angular-cli
+1) npm install -g @angular/cli
+
+Avviare il prompt e scrivere:
+1)npm install node-sass
+2)ng serve
+Collegarsi a http://localhost:4200/
+

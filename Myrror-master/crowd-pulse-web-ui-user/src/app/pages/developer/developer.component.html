@@ -1,0 +1,29 @@
+<div *ngIf="developer">
+  <div class="page-title-header">
+    <h1>Developer</h1>
+  </div>
+  <div class="main-content-page" ngClass.gt-sm="larger-margin">
+    <h2>Access Token</h2>
+    <p>Use access-token to use {{appName}} API.</p>
+
+    <label>Access Token</label>
+    <div fxLayout>
+      <textarea type="text" [(ngModel)]="accessToken" disabled></textarea>
+    </div>
+    <label>Api URL</label>
+    <input type="text" value="{{apiUrl}}api" disabled>
+
+    <p>You can use your access token in three ways: </p>
+    <ol>
+      <li>In the body of a POST request with <strong>access_token</strong> field</li>
+      <li>With <strong>x-access-token</strong> header in the HTTP request</li>
+      <li>In the URL with <strong>access_token</strong> query parameter</li>
+    </ol>
+
+    <h2>Endpoints</h2>
+    <h3>Profile</h3>
+    <p class="endpoint-name">/profile/username</p>
+    <p>GET request to retrieve the profile information of the specified user. Only the information shared by the users
+      can be retrieved.</p>
+  </div>
+</div>

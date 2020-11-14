@@ -1,0 +1,17 @@
+<div ngClass.gt-sm="main-content-page">
+  <div *ngIf="charts && charts.length > 0; else noCharts" class="card-spacer">
+    <mat-card *ngFor="let chart of charts" class="card-spacer">
+      <h2>{{chart.name}}</h2>
+      <p>{{chart.description}}</p>
+      <div [chart]="chart.chart"></div>
+    </mat-card>
+  </div>
+
+  <ng-template #noCharts>
+    <mat-card>
+      <h2>Demographics</h2>
+      <p>Community demographic data will be shown here.</p>
+    </mat-card>
+  </ng-template>
+</div>
+

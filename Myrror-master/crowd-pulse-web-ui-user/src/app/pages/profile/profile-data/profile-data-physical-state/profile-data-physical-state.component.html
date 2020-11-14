@@ -1,0 +1,303 @@
+<div ngClass.gt-sm="main-content-page">
+
+  <div>
+    <mat-card class="card-spacer">
+      <h3>Filter</h3>
+      <div fxLayout.lt-md="column">
+
+        <!-- filter by date -->
+        <mat-form-field fxFlex class="filter-date">
+          <input matInput [(ngModel)]="filter.dateFrom" [matDatepicker]="fromDate" placeholder="From Date"
+                 (ngModelChange)="updateChart()">
+          <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+          <mat-datepicker #fromDate></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field fxFlex class="filter-date">
+          <input matInput [(ngModel)]="filter.dateTo" [matDatepicker]="toDate" placeholder="To Date"
+                 (ngModelChange)="updateChart()">
+          <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+          <mat-datepicker #toDate></mat-datepicker>
+        </mat-form-field>
+
+        <!-- filter by type -->
+        <mat-form-field fxFlex class="filter-date">
+          <mat-select [(ngModel)]="selectedType" (ngModelChange)="updateChart()" placeholder="Type">
+            <mat-option *ngFor="let type of types" [value]="type">
+              {{ type.name | uppercase }}
+
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <!-- filter by type chart -->
+        <mat-form-field fxFlex class="filter-date">
+          <mat-select [(ngModel)]="selectedChart" (ngModelChange)="updateChart()" placeholder="Type">
+            <mat-option *ngFor="let type of visualization" [value]="type">
+              {{ type.name | uppercase }}
+
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+      </div>
+      <div fxLayout.lt-md="column">
+      <mat-form-field fxFlex class="filter-date" *ngIf = "showAnalysis == true"> 
+        <mat-select [(ngModel)]="filter.selectedAnalysis" (ngModelChange)="updateChart()" placeholder="Analysis name">
+          <mat-option *ngFor="let type of analyses" [value]="type.analysisName">
+            {{ type.analysisName | uppercase }}
+
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div>
+      <!-- filter by Analysis name -->
+      
+    </mat-card>
+
+          
+
+    <div *ngIf="selectedType; else noPhysicalSelected">
+
+      <!-- this creates a chart for sleep -->
+      <mat-card *ngIf="selectedType.id == 'sleep' ">
+        <h1>{{ selectedType.name }}</h1>
+        <div [chart]="customChart"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'sleep' ">
+        <div [chart]="customChart2"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'sleep' ">
+        <div [chart]="customChart3"></div>
+      </mat-card>
+
+      <!-- this creates a chart for heart -->
+      <mat-card *ngIf="selectedType.id == 'heart'">
+        <div [chart]="customChart"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'heart'">
+        <div [chart]="customChart2"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'heart'">
+        <div [chart]="customChart3"></div>
+      </mat-card>
+
+      <!-- this creates a chart for body -->
+      <mat-card *ngIf="selectedType.id == 'body'">
+        <div [chart]="customChart"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'body'">
+        <div [chart]="customChart2"></div>
+      </mat-card>
+      <mat-card *ngIf="selectedType.id == 'body'">
+        <div [chart]="customChart3"></div>
+      </mat-card>
+
+       <!-- this creates a chart for diagnosis -->
+     <mat-card *ngIf="selectedType.id == 'diagnosis'">
+      <div [chart]="customChart"></div>
+     </mat-card>
+
+      <!-- this creates a chart for diagnosis -->
+      <mat-card *ngIf="selectedType.id == 'analysis'">
+        <div [chart]="customChart"></div>
+      </mat-card>
+
+      <mat-card *ngIf="showTableTherapy== true" class="stats-card">
+
+        <div class="list-div" fxLayout>
+
+        <div fxFlex="30">
+          <p>THERAPY NAME</p>
+        </div>
+
+        <div fxFlex="30">
+          <p>DRUG NAME</p>
+        </div>
+
+        <div fxFlex="30">
+          <p>DOSAGE</p>
+        </div>
+
+        </div>
+        
+         
+          <div class="list-div" fxLayout *ngFor="let tp of therapy">
+
+            <div fxFlex="30">
+              <p class="table-card">{{ tp.therapyName }}</p>
+            </div>
+
+            <div  fxFlex="30">
+              <p class="table-card">{{ tp.drug_name}}</p>
+            </div>
+
+            <div fxFlex>
+              <p class="table-card" >{{ tp.dosage }}</p>
+            </div>
+
+            <mat-divider></mat-divider>
+          </div>
+        </mat-card>
+
+        <mat-card *ngIf="showMedicalArea== true" class="stats-card">
+
+          <div class="list-div" fxLayout>
+  
+          <div fxFlex="30">
+            <p>MEDICAL AREA</p>
+          </div>
+  
+  
+          </div>
+          
+           
+            <div class="list-div" fxLayout *ngFor="let tp of medicalArea">
+  
+              <div fxFlex="30">
+                <p class="table-card">{{ tp.medicalArea }}</p>
+              </div>
+
+  
+              <mat-divider></mat-divider>
+            </div>
+        </mat-card>
+      
+
+          <!--show table for medicalVisit-->
+          <mat-card *ngIf="showTableMedicalVisit== true" class="stats-card">
+
+            <div class="list-div" fxLayout>
+
+            <div fxFlex="30">
+              <p>MEDICAL VISIT NAME</p>
+            </div>
+
+            <div fxFlex="30">
+              <p>NAME FACILITY</p>
+            </div>
+
+            <div fxFlex="30">
+              <p>DIAGNOSIS</p>
+            </div>
+            <div fxFlex="30">
+              <p>MEDICAL PRESCRIPTION</p>
+            </div>
+            
+            </div>
+            
+            
+              <div class="list-div" fxLayout *ngFor="let mv of medicalVisit">
+
+                <div fxFlex="30">
+                  <p class="table-card">{{ mv.nameVisit }}</p>
+                </div>
+
+                <div  fxFlex="30">
+                  <p class="table-card">{{ mv.nameFacility}}</p>
+                </div>
+
+                <div fxFlex="30">
+                  <p class="table-card" >{{ mv.diagnosis }}</p>
+                </div>
+
+                <div fxFlex="30">
+                  <p class="table-card" >{{ mv.medicalPrescription }}</p>
+                </div>
+
+                <mat-divider></mat-divider>
+              </div>
+            </mat-card>
+
+
+            <!--show table for disease-->
+          <mat-card *ngIf="showTableDisease== true" class="stats-card">
+
+            <div class="list-div" fxLayout>
+
+            <div fxFlex="30">
+              <p>DISEASE NAME</p>
+            </div>
+
+            <div fxFlex="30">
+              <p>PLACE DIAGNOSY</p>
+            </div>
+
+            <div fxFlex="30">
+              <p>COMPLETE DIAGNOSY</p>
+            </div>
+            
+            </div>
+            
+            
+              <div class="list-div" fxLayout *ngFor="let di of disease">
+
+                <div fxFlex="30">
+                  <p class="table-card">{{ di.nameDisease }}</p>
+                </div>
+
+                <div  fxFlex="30">
+                  <p class="table-card">{{ di.placeDiagnosis}}</p>
+                </div>
+
+                <div fxFlex="30">
+                  <p class="table-card" >{{ di.completeDiagnosis }}</p>
+                </div>
+
+                <mat-divider></mat-divider>
+              </div>
+            </mat-card>
+
+
+
+
+            <!--show table for hospitalization-->
+          <mat-card *ngIf="showTableHospitalization== true" class="stats-card">
+
+            <div class="list-div" fxLayout>
+
+            <div fxFlex="30">
+              <p>HOSPITALIZATION NAME</p>
+            </div>
+
+            <div fxFlex="30">
+              <p>HOSPITAL WARD</p>
+            </div>
+
+            <div fxFlex="30">
+              <p>DIAGNOSIS</p>
+            </div>
+            
+            </div>
+            
+            
+              <div class="list-div" fxLayout *ngFor="let h of hospitalization">
+
+                <div fxFlex="30">
+                  <p class="table-card">{{ h.name }}</p>
+                </div>
+
+                <div  fxFlex="30">
+                  <p class="table-card">{{ h.hospitalWard}}</p>
+                </div>
+
+                <div fxFlex="30">
+                  <p class="table-card" >{{ h.diagnosisHospitalization }}</p>
+                </div>
+
+                <mat-divider></mat-divider>
+              </div>
+            </mat-card>
+
+    </div>
+
+    
+
+    <ng-template #noPhysicalSelected>
+      <mat-card>
+        <p>No Physical state type selected.</p>
+      </mat-card>
+    </ng-template>
+
+  </div>
+
+</div>

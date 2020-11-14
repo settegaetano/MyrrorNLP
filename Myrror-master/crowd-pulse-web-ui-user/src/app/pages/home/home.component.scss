@@ -1,0 +1,24 @@
+@import '../../../styles';
+@include mat-core();
+
+.home-div {
+  margin-top: 0px;
+  height: calc(100vh - #{$navbar-height});
+}
+
+.link-div {
+  margin-top: 16px;
+  color: mat-color($primary, default-contrast);
+}
+
+.logo-div {
+  margin-bottom: 32px;
+}
+
+.logo-size-mobile {
+  width: 70%;
+}
+
+.login-signup-div {
+  max-width: 40%;
+}

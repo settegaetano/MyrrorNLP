@@ -1,0 +1,18 @@
+<div ngClass.gt-sm="main-content-page" fxLayout="column" fxLayoutAlign="center space-around">
+
+  <mat-card class="settings-card">
+    <h2>Privacy</h2>
+    <div fxLayout="column">
+      <mat-slide-toggle *ngFor="let option of privacyOptions" [(ngModel)]="option.value">{{option.name}}</mat-slide-toggle>
+    </div>
+    <br>
+    <button mat-raised-button color="primary" (click)="saveConfiguration()">Save</button>
+  </mat-card>
+
+  <!-- TODO add here credentials settings
+  <mat-card class="settings-card">
+    <h2>Credentials</h2>
+  </mat-card>
+  -->
+
+</div>

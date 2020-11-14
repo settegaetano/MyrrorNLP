@@ -1,0 +1,53 @@
+<div fxLayout="row" fxLayoutAlign="center center" class="page-title-header">
+  <i class="fa fa-linkedin fa-4x" aria-hidden="true"></i>
+</div>
+
+<div class="main-content-page" fxLayout="row" fxLayoutAlign="center center" *ngIf="loading; else content">
+  <mat-spinner></mat-spinner>
+</div>
+
+<ng-template #content>
+  <div class="main-content-page"  *ngIf="!user || !user.identities || !user.identities.linkedIn; else linkedInData">
+    <h2>No Linked Account</h2>
+    <p>By linking your LinkedIn account, you agree that {{appName}} will be able to read basic information
+      of your profile.</p>
+    <button mat-raised-button (click)="associate()" color="primary">Link Account</button>
+  </div>
+
+  <ng-template #linkedInData>
+    <div ngClass.gt-sm="main-content-page">
+      <h1 fxHide.lt-sm fxHide.sm>LinkedIn Account</h1>
+
+      <div class="linkedIn-actions-div" fxLayout fxLayoutAlign="center center" fxLayoutAlign.gt-sm="end center">
+        <mat-slide-toggle fxFlex="90" fxFlex.gt-sm="20" [(ngModel)]="shareProfile" (change)="updateShareProfile()">Share Profile</mat-slide-toggle>
+        <span fxFlex.gt-sm="65"></span>
+        <button fxFlex="90" fxFlex.gt-sm="25" mat-raised-button color="warn" (click)="deleteAccount()">Delete Account</button>
+      </div>
+
+      <mat-card class="linkedIn-card">
+        <mat-card-title>Profile Data</mat-card-title>
+        <mat-table #table [dataSource]="dataSource">
+          <ng-container matColumnDef="dataName">
+            <mat-header-cell *cdkHeaderCellDef> Data </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dataName | uppercase }} </mat-cell>
+          </ng-container>
+
+          <ng-container matColumnDef="dataValue">
+            <mat-header-cell *cdkHeaderCellDef> Value </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.dataValue }} </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+        <br>
+        <button mat-raised-button color="primary" (click)="updateProfile(true)">
+          <mat-icon aria-label="get_data">cached</mat-icon>
+          Update Profile
+        </button>
+      </mat-card>
+    </div>
+  </ng-template>
+
+</ng-template>

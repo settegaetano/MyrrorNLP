@@ -1,0 +1,650 @@
+<div ngClass.gt-sm="main-content-page" fxLayout.xs="column" fxLayout.sm="column" fxLayout="row" fxLayoutWrap
+     xmlns="http://www.w3.org/1999/html">
+
+  <div fxFlex.lt-md="35" fxFlex.lt-sm="100" fxFlex="20" fxLayout="column">
+
+    <!-- select visualization -->
+    <mat-card class="filter-card">
+      <h3>Custom</h3>
+      <mat-form-field class="filter-container">
+        <mat-select [(ngModel)]="selected.visualization" (ngModelChange)="clearFilter()" placeholder="Visualization">
+          <mat-option><i class="fa fa-times-circle" aria-hidden="true"></i>&nbsp; None</mat-option>
+          <mat-option *ngFor="let vis of visualizations" [value]="vis">
+            {{ vis.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field *ngIf="selected.visualization && selected.visualization.types.length > 1"
+                      class="filter-container">
+        <mat-select [(ngModel)]="selected.type" (ngModelChange)="updateChart()" placeholder="Type">
+          <mat-option *ngFor="let type of selected.visualization.types" [value]="type">
+            {{ type.name | uppercase }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+    </mat-card>
+
+    <!-- filters -->
+    <div fxFlex.lt-md="35" fxFlex.lt-sm="100" fxFlex="20" *ngIf="selected.visualization && selected.type">
+      <mat-card class="filter-card" *ngFor="let filter of selected.type.filters">
+
+        <!-- filter by date -->
+        <div *ngIf="filter == filters.filterDate">
+          <h3>{{filter.name}}</h3>
+          <mat-form-field class="filter-container">
+            <input matInput [(ngModel)]="filter.dateFrom" [matDatepicker]="fromDate" placeholder="From Date"
+                   (ngModelChange)="updateChart()">
+            <mat-datepicker-toggle matSuffix [for]="fromDate"></mat-datepicker-toggle>
+            <mat-datepicker #fromDate></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="filter-container">
+            <input matInput [(ngModel)]="filter.dateTo" [matDatepicker]="toDate" placeholder="To Date"
+                   (ngModelChange)="updateChart()">
+            <mat-datepicker-toggle matSuffix [for]="toDate"></mat-datepicker-toggle>
+            <mat-datepicker #toDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <!-- filter by category -->
+        <div *ngIf="filter == filters.filterCategory" class="filter-container">
+          <mat-checkbox [(ngModel)]="filter.groupBy" (ngModelChange)="updateChart()">{{filter.name}}</mat-checkbox>
+        </div>
+
+        <!-- filter by range map -->
+        <div *ngIf="filter == filters.filterCoordinate">
+          <h3>{{filter.name}}</h3>
+          <mat-form-field class="filter-container">
+            <input matInput [(ngModel)]="filter.latitude" type="number" (ngModelChange)="updateChart()" placeholder="Latitude">
+          </mat-form-field>
+          <mat-form-field class="filter-container">
+            <input matInput [(ngModel)]="filter.longitude" type="number" (ngModelChange)="updateChart()" placeholder="Longitude">
+          </mat-form-field>
+          <mat-form-field class="filter-container">
+            <input matInput [(ngModel)]="filter.radius" type="number" (ngModelChange)="updateChart()" placeholder="Radius">
+          </mat-form-field>
+        </div>
+
+        <!-- filter by source (for messages) -->
+        <div *ngIf="filter == filters.filterMessage">
+          <h3>{{filter.name}}</h3>
+          <mat-form-field class="filter-container">
+            <mat-select [(ngModel)]="filter.source" (ngModelChange)="updateChart()" placeholder="Source">
+              <mat-option *ngFor="let source of filter.sources" [value]="source">
+                {{ source | uppercase }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- filter by source (for connection) -->
+        <div *ngIf="filter == filters.filterConnection">
+          <h3>{{filter.name}}</h3>
+          <mat-form-field class="filter-container">
+            <mat-select [(ngModel)]="filter.source" (ngModelChange)="updateChart()" placeholder="Source">
+              <mat-option *ngFor="let source of filter.sources" [value]="source">
+                {{ source | uppercase }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- filter by source (for activity) -->
+        <div *ngIf="filter == filters.filterActivity">
+          <h3>{{filter.name}}</h3>
+          <mat-form-field class="filter-container">
+            <mat-select [(ngModel)]="filter.source" (ngModelChange)="updateChart()" placeholder="Source">
+              <mat-option *ngFor="let source of filter.sources" [value]="source">
+                {{ source | uppercase }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- filter by source (for body) -->
+        <div *ngIf="filter == filters.filterBody">
+          <h3>{{filter.name}}</h3>
+          <mat-form-field class="filter-container">
+            <mat-select [(ngModel)]="filter.source" (ngModelChange)="updateChart()" placeholder="Source">
+              <mat-option *ngFor="let source of filter.sources" [value]="source">
+                {{ source | uppercase }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <!-- limit results -->
+        <div *ngIf="filter == filters.filterLimit">
+          <h3>{{filter.name}}</h3>
+          <mat-form-field class="filter-container">
+            <input matInput [(ngModel)]="filter.limit" type="number" (ngModelChange)="updateChart()" placeholder="Number">
+          </mat-form-field>
+        </div>
+
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- charts -->
+  <div fxFlex.lt-md="65" fxFlex.lt-sm="100" fxFlex="80">
+
+    <!-- loading -->
+    <mat-card *ngIf="!selected.visualization && chartsLoading"
+              fxLayoutAlign="center" class="stats-card">
+      <mat-spinner></mat-spinner>
+    </mat-card>
+
+    <!-- custom chart -->
+    <mat-card *ngIf="selected.visualization && customChart; else noChart" class="stats-card">
+        <h2>{{selected.visualization.name}}</h2>
+        <p>{{selected.visualization.description}}</p>
+        <div [chart]="customChart"></div>
+    </mat-card>
+
+    <ng-template #noChart>
+
+      <!-- map -->
+      <mat-card *ngIf="selected.visualization && selected.visualization.id == 'personaldata-gps' && gpsCoordinate; else noMap"
+                class="stats-card">
+        <h2>{{selected.visualization.name}}</h2>
+        <p>{{selected.visualization.description}}</p>
+        <agm-map [latitude]="gpsCoordinate[0].latitude" [longitude]="gpsCoordinate[0].longitude">
+
+          <agm-marker [latitude]="gpsCoordinate[0].latitude"
+                      [longitude]="gpsCoordinate[0].longitude"
+                      [label]="'S'"></agm-marker>
+
+          <agm-marker [latitude]="gpsCoordinate[gpsCoordinate.length - 1].latitude"
+                      [longitude]="gpsCoordinate[gpsCoordinate.length - 1].longitude"
+                      [label]="'E'"></agm-marker>
+
+          <agm-polyline [strokeColor]="'#FF0000'" [strokeWeight]="2" [geodesic]="true">
+            <agm-polyline-point *ngFor="let coor of gpsCoordinate" [latitude]="coor.latitude"
+                                [longitude]="coor.longitude">
+            </agm-polyline-point>
+          </agm-polyline>
+        </agm-map>
+      </mat-card>
+
+      <ng-template #noMap>
+
+        <!-- messages -->
+        <mat-card *ngIf="selected.visualization && selected.visualization.id == 'messages-list'
+                          && socialMessages && socialMessages.length; else noMessages" class="stats-card">
+          <h2>{{selected.visualization.name}}</h2>
+          <p>{{selected.visualization.description}}</p>
+          <div class="list-div" fxLayout *ngFor="let message of socialMessages">
+
+            <div *ngIf="message.date" fxFlex="30">
+              <p>{{ message.date }}</p>
+            </div>
+
+            <div *ngIf="message.source" fxFlex="30">
+              <p>{{ message.source }}</p>
+            </div>
+
+            <div fxFlex>
+              <p *ngIf="message.story">Story: {{ message.story }}</p>
+              <p *ngIf="message.text">Text: {{ message.text }} </p>
+            </div>
+
+            <mat-divider></mat-divider>
+          </div>
+        </mat-card>
+
+        <ng-template #noMessages>
+
+          <mat-card *ngIf="selected.visualization && selected.visualization.id == 'likes-list'
+                          && likes && likes.length; else noLikes" class="stats-card">
+            <h2>{{selected.visualization.name}}</h2>
+            <p>{{selected.visualization.description}}</p>
+            <div class="list-div" *ngFor="let like of likes">
+              <p>{{like.name}}</p>
+              <mat-divider></mat-divider>
+            </div>
+          </mat-card>
+
+          <ng-template #noLikes>
+
+            <mat-card *ngIf="selected.visualization && selected.visualization.id == 'connections-list'
+                          && connections && connections.length; else noConnections" class="stats-card">
+              <h2>{{selected.visualization.name}}</h2>
+              <p>{{selected.visualization.description}}</p>
+              <div class="list-div" *ngFor="let connection of connections">
+                <p *ngIf="connection.contactName">{{ connection.contactName }}</p>
+                <p *ngIf="connection.name">{{ connection.name }}</p>
+                <mat-divider></mat-divider>
+              </div>
+            </mat-card>
+
+            <ng-template #noConnections>
+
+              <mat-card *ngIf="selected.visualization && selected.visualization.id == 'activities-list'
+                          && activities && activities.length; else noActivities" class="stats-card">
+
+                <h2>{{selected.visualization.name}}</h2>
+                <p>{{selected.visualization.description}}</p>
+
+                <div class="list-div" fxLayout *ngFor="let activity of activities">
+
+                  <div *ngIf="activity.timestamp" fxFlex="30">
+                    <p>{{ activity.timestamp | date }}</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <!-- TODO parametrize here if there are more sources -->
+                    <p>ANDROID</p>
+                  </div>
+
+                  <div fxFlex>
+                    <p>Running ({{ activity.running }}%), Walking ({{ activity.walking }}%), Still ({{ activity.still }}%),
+                      In Vehicle ({{ activity.inVehicle }}%), On Bicycle ({{ activity.onBicycle }}%),
+                      On Foot ({{ activity.onFoot }}%), Tilting ({{ activity.tilting }}%),
+                      Unknown ({{ activity.unknown }}%)</p>
+                  </div>
+                  <mat-divider></mat-divider>
+                </div>
+
+              </mat-card>
+
+
+
+              <mat-card *ngIf="selected.visualization && selected.visualization.id == 'activities-list'
+                          && activitiesFitbit && activitiesFitbit.length" class="stats-card">
+
+                <h2>{{selected.visualization.name}}</h2>
+                <p>{{selected.visualization.description}}</p>
+
+
+
+                <div class="list-div" fxLayout *ngFor="let timestamp of uniqueArray">
+
+                  <div *ngIf="timestamp" fxFlex="12" layout="row" layout-align="start center" >
+                    <p>{{ timestamp | date }}</p>
+                  </div>
+
+                  <div  fxFlex="10" layout="row" layout-align="start center" >
+                    <p> FITBIT </p>
+                  </div>
+
+                  <div  layout="row" layout-align="end center" *ngFor="let activity of activitiesFitbit">
+                    <p *ngIf="activity.steps && timestamp == activity.timestamp"> Steps({{ activity.steps | number:0}}),  </p>
+                    <p *ngIf="activity.distance && timestamp == activity.timestamp"> Distance({{ activity.distance | number:'1.2-2' }}km),  </p>
+                    <p *ngIf="activity.activityCalories && timestamp == activity.timestamp"> Calories({{ activity.activityCalories | number:0 }}kcal),  </p>
+                    <p *ngIf="activity.elevation && timestamp == activity.timestamp"> Elevation({{ activity.elevation | number:0}}°), </p>
+                    <p *ngIf="activity.minutesVeryActive && timestamp == activity.timestamp"> M.VeryActive({{(activity.minutesVeryActive) | number:0}}m),  </p>
+                    <p *ngIf="activity.minutesSedentary && activity.minutesSedentary < 1200 && activity.minutesSedentary != 975 && timestamp == activity.timestamp; other">Sedentary({{(activity.minutesSedentary/60) | number:'2.0-0'}}h),  </p>
+                    <p #other *ngIf="activity.minutesSedentary > 1200 && timestamp == activity.timestamp"> Sedentary({{(activity.minutesSedentary/60) | number:'2.0-0'}}h), Steps(0), Distance(0 km), Calories(0 kcal), M.VeryActive(0 m),   </p>
+                    <p *ngIf="activity.minutesSedentary == 975 && timestamp == activity.timestamp"> M.Sedentary({{ activity.minutesSedentary | number:0}}), Steps(0), Distance(0 km), Calories(0 kcal), M.VeryActive(0 m),   </p>
+                    <p *ngIf="activity.minutesFairlyActive && timestamp == activity.timestamp"> M.Fairly({{ activity.minutesFairlyActive | number:0}}m),  </p>
+                    <p *ngIf="activity.floors && timestamp == activity.timestamp"> Floors({{ activity.floors | number:0}}),  </p>
+                    <p *ngIf="activity.minutesLightlyActive && timestamp == activity.timestamp"> Lightly({{(activity.minutesLightlyActive) | number:0}}m), </p>
+                  </div>
+                  <mat-divider></mat-divider>
+                </div>
+
+              </mat-card>
+
+              <ng-template #noActivities>
+
+
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'sleep-list'
+                          && sleeps && sleeps.length; else noSleep" class="stats-card">
+                  <h2>{{selected.visualization.name}}</h2>
+                  <p>{{selected.visualization.description}}</p>
+                  <div class="list-div" *ngFor="let sleep of sleeps">
+                    <div fxFlex="30">
+                      <p>{{sleep.timestamp | date}}</p>
+                    </div>
+
+                    <div fxFlex="30">
+                      <p> FITBIT </p>
+                    </div>
+
+                    <div fxFlex>
+                      <p> Duration ({{ sleep.duration | number:0}}), Efficiency ({{ sleep.efficiency | number:0}}),
+                        Minutes After Wakup ({{ sleep.minutesAfterWakup | number:0}}), Minutes A sleep ({{ sleep.minutesAsleep | number:0}}),
+                        Minutes A wake ({{ sleep.minutesAwake | number:0}}),
+                        Minutes To Fall A Sleep ({{ sleep.minutesToFallASleep | number:0}}),
+                        Time In Bed ({{ sleep.timeInBed | number:0}})
+                      </p>
+                    </div>
+                    <mat-divider></mat-divider>
+                  </div>
+                </mat-card>
+
+
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'heart-rate-list'
+                          && hearts && hearts.length; else noHeart" class="stats-card">
+                  <h2>{{selected.visualization.name}}</h2>
+                  <p>{{selected.visualization.description}}</p>
+                  <div class="list-div" *ngFor="let heart of hearts">
+                    <div fxFlex="30">
+                      <p>{{heart.timestamp | date}}</p>
+                    </div>
+
+                    <div fxFlex="30">
+                      <p> FITBIT </p>
+                    </div>
+
+                    <div fxFlex>
+                      <p> Resting Heart-Rate ({{ heart.restingHeartRate | number:0}}), Out Of Range minutes ({{ heart.outOfRange_minutes | number:0}}),
+                        Fat burn minutes ({{ heart.fatBurn_minutes | number:0}}), Cardio minutes ({{ heart.cardio_minutes | number:0}}),
+                        Peak minutes ({{ heart.peak_minutes | number:0}})
+                      </p>
+                    </div>
+                    <mat-divider></mat-divider>
+                  </div>
+                </mat-card>
+
+
+
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'food-list'
+                          && foods && foods.length; else noFood" class="stats-card">
+                  <h2>{{selected.visualization.name}}</h2>
+                  <p>{{selected.visualization.description}}</p>
+                  <div class="list-div" *ngFor="let food of foods">
+                    <div fxFlex="30">
+                      <p>{{food.timestamp | date}}</p>
+                    </div>
+
+                    <div fxFlex="30">
+                      <p> FITBIT </p>
+                    </div>
+
+                    <div fxFlex>
+                      <p> Calories In ({{ food.caloriesIn | number:0}})
+                      </p>
+                    </div>
+                    <mat-divider></mat-divider>
+                  </div>
+                </mat-card>
+
+
+
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'body-list'
+                          && body && body.length" class="stats-card">
+
+                  <h2>{{selected.visualization.name}}</h2>
+                  <p>{{selected.visualization.description}}</p>
+
+                  <div class="list-div" fxLayout *ngFor="let onebody of body">
+
+                    <div *ngIf="onebody.timestamp" fxFlex="30">
+                      <p>{{ onebody.timestamp | date }}</p>
+                    </div>
+
+                    <div fxFlex="30">
+                      <p> FITBIT </p>
+                    </div>
+
+                    <div fxFlex>
+                      <pre *ngIf="onebody.bodyBmi"> BMI ({{ onebody.bodyBmi | number:0}}), </pre>
+                      <pre *ngIf="onebody.bodyFat">FAT ({{ onebody.bodyFat | number:0 }}), </pre>
+                      <pre *ngIf="onebody.bodyWeight">WEIGHT ({{ onebody.bodyWeight | number:0 }}), </pre>
+
+                    </div>
+                    <mat-divider></mat-divider>
+                  </div>
+
+                </mat-card>
+
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'medical-area' && medicalArea && medicalArea.length"
+                  class="stats-card">
+                  <div class="list-div" fxLayout>
+  
+                    <div fxFlex="30">
+                      <p>MEDICAL AREA</p>
+                    </div>
+            
+            
+                    </div>
+                    
+                     
+                      <div class="list-div" fxLayout *ngFor="let tp of medicalArea">
+            
+                        <div fxFlex="30">
+                          <p class="stats-ma">{{ tp.medicalArea }}</p>
+                        </div>
+          
+            
+                        <mat-divider></mat-divider>
+                      </div>
+                </mat-card>
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'therapy-list' && therapy && therapy.length"
+                  class="stats-card">
+                  <div class="list-div" fxLayout>
+
+                    <div fxFlex="30">
+                      <p>THERAPY NAME</p>
+                    </div>
+            
+                    <div fxFlex="30">
+                      <p>DRUG NAME</p>
+                    </div>
+            
+                    <div fxFlex="30">
+                      <p>DOSAGE</p>
+                    </div>
+            
+                    </div>
+                    <div class="list-div" fxLayout *ngFor="let tp of therapy">
+
+                      <div fxFlex="30">
+                        <p class="stats-all">{{ tp.therapyName }}</p>
+                      </div>
+          
+                      <div  fxFlex="30">
+                        <p class="stats-all">{{ tp.drug_name}}</p>
+                      </div>
+          
+                      <div fxFlex>
+                        <p class="stats-all" >{{ tp.dosage }}</p>
+                      </div>
+          
+                      <mat-divider></mat-divider>
+                    </div>
+                </mat-card>
+
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'diagnosis-list' && diagnosis && diagnosis.length "
+                class="stats-card">
+                <div class="list-div" fxLayout>
+
+                  <div fxFlex="30">
+                    <p>DIAGNOSIS NAME</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <p>DIAGNOSIS ACCURACY</p>
+                  </div>
+          
+          
+          
+                  </div>
+                  
+                   
+                    <div class="list-div" fxLayout *ngFor="let dg of diagnosis">
+          
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ dg.diagnosis_name }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ dg.diagnosis_accuracy }}</p>
+                      </div>
+        
+          
+                      <mat-divider></mat-divider>
+                    </div>
+              </mat-card>
+              <mat-card *ngIf="selected.visualization && selected.visualization.id == 'analysis-list' && analysis && analysis.length"
+                  class="stats-card">
+                  <div class="list-div" fxLayout>
+  
+                    <div fxFlex="30">
+                      <p>ANALYSIS NAME</p>
+                    </div>
+
+                    <div fxFlex="30">
+                      <p>RESULT</p>
+                    </div>
+            
+            
+                    </div>
+                    
+                     
+                      <div class="list-div" fxLayout *ngFor="let tp of analysis">
+            
+                        <div fxFlex="30">
+                          <p class="stats-ma">{{ tp.analysisName }}</p>
+                        </div>
+
+                        <div fxFlex="30">
+                          <p class="stats-ma">{{ tp.result }} {{ tp.unit }}</p>
+                        </div>
+          
+            
+                        <mat-divider></mat-divider>
+                      </div>
+                </mat-card>
+
+                <mat-card *ngIf="selected.visualization && selected.visualization.id == 'medicalVisit-list' && medicalVisit && medicalVisit.length "
+                class="stats-card">
+                <div class="list-div" fxLayout>
+
+                  <div fxFlex="30">
+                    <p>MEDICAL VISIT NAME</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <p>NAME FACILITY</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <p>DIAGNOSIS</p>
+                  </div>
+          
+                  <div fxFlex="30">
+                    <p>MEDICAL PRESCRIPTION</p>
+                  </div>
+          
+                  </div>
+                  
+                   
+                    <div class="list-div" fxLayout *ngFor="let mv of medicalVisit">
+          
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ mv.nameVisit }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ mv.nameFacility }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ mv.diagnosis }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ mv.medicalPrescription }}</p>
+                      </div>
+        
+          
+                      <mat-divider></mat-divider>
+                    </div>
+              </mat-card>
+
+              <mat-card *ngIf="selected.visualization && selected.visualization.id == 'disease-list' && disease && disease.length "
+                class="stats-card">
+                <div class="list-div" fxLayout>
+
+                  <div fxFlex="30">
+                    <p>DISEASE NAME</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <p>PLACE DIAGNOSY</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <p>COMPLETE DIAGNOSY</p>
+                  </div>
+          
+                  </div>
+                  
+                   
+                    <div class="list-div" fxLayout *ngFor="let di of disease">
+          
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ di.nameDisease }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ di.placeDiagnosis }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ di.completeDiagnosis }}</p>
+                      </div>
+        
+          
+                      <mat-divider></mat-divider>
+                    </div>
+              </mat-card>
+
+
+
+              <mat-card *ngIf="selected.visualization && selected.visualization.id == 'hospitalization-list' && hospitalization && hospitalization.length "
+                class="stats-card">
+                <div class="list-div" fxLayout>
+
+                  <div fxFlex="30">
+                    <p>HOSPITALIZATION NAME</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <p>HOSPITAL WARD</p>
+                  </div>
+
+                  <div fxFlex="30">
+                    <p>DIAGNOSIS</p>
+                  </div>
+          
+                  </div>
+                  
+                   
+                    <div class="list-div" fxLayout *ngFor="let h of hospitalization">
+          
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ h.name }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ h.hospitalWard }}</p>
+                      </div>
+
+                      <div fxFlex="30">
+                        <p class="stats-ma">{{ h.diagnosisHospitalization }}</p>
+                      </div>
+        
+          
+                      <mat-divider></mat-divider>
+                    </div>
+              </mat-card>
+
+
+              
+                <!-- chart/map selected but no data available -->
+
+
+              </ng-template>
+            </ng-template>
+          </ng-template>
+        </ng-template>
+      </ng-template>
+    </ng-template>
+
+  </div>
+
+</div>
