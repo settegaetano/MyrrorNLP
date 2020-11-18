@@ -5,18 +5,26 @@ var CrowdPulse = require('./../crowd-pulse-data');
 var config = require('./../lib/config');
 var qSend = require('../lib/expressQ').send;
 var qErr = require('../lib/expressQ').error;
+var databaseName = require('../crowd-pulse-data/databaseName');
 
-const DB_MUSIC = "musicPreference";
-
+//const DB_MUSIC = "musicPreference";
 //const musicPreference = require('./../crowd-pulse-data/model/musicPreference');
 
 exports.endpoint = function() {
 
     router.route('/music').post(function(req,res){
-        try{
+      
             var dbConn = new CrowdPulse();
+
+            var like;
+            var confidence = {
+                genre : 0,
+                artist:0,
+                song:0
+            };
+
             var preference = {
-                username:req.body.username,
+                email:req.body.username,
                 song:req.body.song,
                 artist: req.body.artist,
                 genre: req.body.genre,
@@ -24,56 +32,109 @@ exports.endpoint = function() {
                 timestamp: req.body.timestamp
             };
 
-            //console.log(preference)
+            //console.log(preference.email);
 
-            return dbConn.connect(config.database.url, DB_MUSIC)
+
+            var username = "";
+            return dbConn.connect(config.database.url, 'profiles')
                 .then(function (conn) {
-                    return conn.MusicPreference.newFromObject(preference).save().then(
-                        function () {
-                            console.log('Preferenza inserita correttamente')
-                            dbConn.disconnect();
-                        });
+                    return conn.Profile.findOne({email: preference.email},function (err,user){username = user.username})
+                        .then(function (){
+
+                            //Check like/dislike
+                            if (preference.like == 1){
+                                like = 'Like:';
+                            }else {
+                                like = 'Dislike:';
+                            }
+
+
+                            console.log(preference);
+
+
+                            return dbConn.connect(config.database.url, username)
+                                .then(function (conn) {
+
+                                    //Se abbiamo il genere
+                                    if ((typeof preference.genre !== 'undefined') && (typeof preference.genre !== 'null')) {
+
+                                        if (preference.artist !== 'null' && preference.song !== 'null') { //abbiamo artista e canzone
+                                            confidence.genre = 0; //se ho artista e canzone, il genere l'ho ricavato
+                                        } else {
+                                            confidence.genre = 1;//genere scritto esplicitamente dall'utente
+                                        }
+
+                                        return conn.Interest.update(
+                                            {value: like + 'Genre:' + preference.genre}, //controllo su genre
+                                            {
+                                                value: like + 'Genre:' + preference.genre,
+                                                source: 'music_preference',
+                                                confidence: confidence.genre,
+                                                timestamp: preference.timestamp
+                                            },
+                                            {upsert: true})
+                                            .then(qSend(res))
+                                            .catch(qErr(res))
+                                    }
+
+                                })
+                                .then(function () {
+                                    return dbConn.connect(config.database.url, username)
+                                    .then(function (conn) {
+
+                                        //Se ho la canzone
+                                        if ((typeof preference.song !== 'undefined') && (typeof preference.song !== 'null')) {
+                                            confidence.song = 1;//canzone scritta esplicitamente dall'utente
+
+                                            return conn.Interest.update(
+                                                {value: like + 'Song:' + preference.song}, //controllo su song
+                                                {
+                                                    value: like + 'Song:' + preference.song,
+                                                    source: 'music_preference',
+                                                    confidence: confidence.song,
+                                                    timestamp: preference.timestamp
+                                                },
+                                                {upsert: true})
+                                                .catch(qErr(res))
+                                        }
+                                    })
+                                })
+                                .then(function(){
+                                    return dbConn.connect(config.database.url,username)
+                                    .then(function (conn) {
+
+                                        //Se abbiamo l'artista
+                                        if ((typeof preference.artist !== 'undefined') && (typeof preference.artist !== 'null')) {
+                                            if (preference.song !== 'null') { //ho la canzone
+                                                confidence.artist = 0;//artista ricavato
+                                            } else {
+                                                confidence.artist = 1;//artista esplicitamente scritto
+                                            }
+
+                                            return conn.Interest.update(
+                                                {value: like + 'Artist:' + preference.artist}, //controllo su artist
+                                                {
+                                                    value: like + 'Artist:' + preference.artist,
+                                                    source: 'music_preference',
+                                                    confidence: confidence.artist,
+                                                    timestamp: preference.timestamp
+                                                },
+                                                {upsert: true})
+                                                .then(qSend(res))
+                                                .catch(qErr(res))
+                                        }
+
+                                    }).finally(function() {
+                                        dbConn.disconnect();
+                                    });
+                                })
+
+                        })
                 });
 
-        }catch(err){
-            console.log(err);
-        }
+
+       
     });
 
     return router;
 };
-
-/**
-   * Gets the user timeline.
-   * Params:
-   *    messages - the number of messages to retrieve
-   
-  router.route('/twitter/user_timeline')
-    .post(function (req, res) {
-      try {
-        var messagesToRead = req.body.messages;
-
-        // if the client do not specify a messages to read number then update the user messages
-        if (!messagesToRead) {
-          updateTweets(req.session.username).then(function () {
-            res.status(200);
-            res.json({auth: true});
-          });
-        } else {
-
-          // return the messages
-          var dbConnection = new CrowdPulse();
-          return dbConnection.connect(config.database.url, req.session.username).then(function (conn) {
-            return conn.Message.find({source: /twitter_./}).sort({date: -1}).limit(messagesToRead);
-          }).then(function (messages) {
-            dbConnection.disconnect();
-            res.status(200);
-            res.json({auth: true, messages: messages});
-          });
-        }
-      } catch(err) {
-        console.log(err);
-        res.sendStatus(500);
-      }
-    });
-*/

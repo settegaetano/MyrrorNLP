@@ -53,6 +53,9 @@ export class PeopleInterestComponent implements OnInit {
   }, {
     id: 'app_category',
     name: 'App Categories',
+  }, {
+    id: 'music_preference',
+    name: 'Music',
   },
 
     // TODO add here new source type
