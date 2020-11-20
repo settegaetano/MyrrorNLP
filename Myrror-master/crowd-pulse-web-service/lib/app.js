@@ -31,7 +31,7 @@ var linkedIn = require('./../endpoint/linkedin');
 var fitbit = require('./../endpoint/fitbit');
 var telegram = require('./../endpoint/telegram');
 var music = require('./../endpoint/music');
-
+var training = require('./../endpoint/training');
 var instagram = require('./../endpoint/instagram');
 var endpointAuth = require('./../endpoint/auth');
 var socketLogs = require('./../sockets/logs');
@@ -93,7 +93,8 @@ var webServiceSetup = function(crowdPulse) {
   app.use(API, instagram.endpoint());
   app.use(AUTH, endpointAuth());
   app.use(API, music.endpoint());
-  
+  app.use(API, training.endpoint());
+
   return crowdPulse;
 };
 

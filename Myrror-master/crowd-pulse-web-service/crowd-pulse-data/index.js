@@ -33,6 +33,7 @@ var DataLayer = function() {
       self.Connection = require('./model/connection')(self.connection);
       self.Like = require('./model/like')(self.connection);
       self.MusicPreference = require('./model/musicPreference')(self.connection);
+      self.TrainingPreference = require('./model/trainingPreference')(self.connection);
       self.ObjectId = mongoose.Types.ObjectId;
 
       // return the whole object

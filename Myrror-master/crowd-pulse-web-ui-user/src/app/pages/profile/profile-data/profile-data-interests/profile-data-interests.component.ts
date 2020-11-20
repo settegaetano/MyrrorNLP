@@ -62,6 +62,9 @@ export class ProfileDataInterestComponent implements OnInit {
   }, {
     id: 'music_preference',
     name: 'Music',
+  }, {
+    id: 'training_preference',
+    name: 'Workout',
   },
 
     // TODO add here new source type
