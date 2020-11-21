@@ -60,6 +60,10 @@ export class PeopleInterestComponent implements OnInit {
     id: 'training_preference',
     name: 'Workout',
   },
+   {
+    id: 'music_preference',
+    name: 'Music',
+  }
 
     // TODO add here new source type
   ];
