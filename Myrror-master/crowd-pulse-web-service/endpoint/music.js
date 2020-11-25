@@ -29,7 +29,7 @@ exports.endpoint = function() {
                 artist: req.body.artist,
                 genre: req.body.genre,
                 like: req.body.like,
-                timestamp: req.body.timestamp
+                timestamp: new Date().getTime()
             };
 
             //console.log(preference.email);
@@ -59,7 +59,7 @@ exports.endpoint = function() {
                                     if ((typeof preference.genre !== 'undefined') && (typeof preference.genre !== 'null')) {
 
                                         if (preference.artist !== 'null' && preference.song !== 'null') { //abbiamo artista e canzone
-                                            confidence.genre = 0; //se ho artista e canzone, il genere l'ho ricavato
+                                            confidence.genre = 0.5; //se ho artista e canzone, il genere l'ho ricavato
                                         } else {
                                             confidence.genre = 1;//genere scritto esplicitamente dall'utente
                                         }
@@ -106,7 +106,7 @@ exports.endpoint = function() {
                                         //Se abbiamo l'artista
                                         if ((typeof preference.artist !== 'undefined') && (typeof preference.artist !== 'null')) {
                                             if (preference.song !== 'null') { //ho la canzone
-                                                confidence.artist = 0;//artista ricavato
+                                                confidence.artist = 0.7;//artista ricavato
                                             } else {
                                                 confidence.artist = 1;//artista esplicitamente scritto
                                             }

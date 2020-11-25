@@ -20,7 +20,7 @@ exports.endpoint = function() {
             email:req.body.username,
             genre: req.body.genre,
             like: req.body.like,
-            timestamp: req.body.timestamp
+            timestamp: new Date().getTime()
         };
 
         console.log(preference.email);

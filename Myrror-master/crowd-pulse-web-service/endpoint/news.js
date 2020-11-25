@@ -21,7 +21,7 @@ exports.endpoint = function() {
             email:req.body.email,
             topic: req.body.topic,
             like: req.body.like,
-            timestamp: req.body.timestamp
+            timestamp: new Date().getTime()
         };
 
         console.log(preference.email);

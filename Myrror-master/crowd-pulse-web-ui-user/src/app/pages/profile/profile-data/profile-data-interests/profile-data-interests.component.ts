@@ -60,16 +60,15 @@ export class ProfileDataInterestComponent implements OnInit {
     id: 'app_category',
     name: 'App Categories',
   }, {
+    id: 'news_preference',
+    name: 'News',
+  },{
     id: 'music_preference',
     name: 'Music',
-  }, {
+  },{
     id: 'training_preference',
-    name: 'Workout',
+    name: 'Training',
   },
-    {
-    id: 'music_preference',
-    name: 'Music',
-  }
 
     // TODO add here new source type
   ];
