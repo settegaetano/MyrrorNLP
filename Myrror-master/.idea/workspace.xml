@@ -20,16 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594237f0-3254-4b7a-81c8-d1f25c26e7bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/programmatv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/recipes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/remove.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/music.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/music.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/news.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/training.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/training.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/profiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/profiles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/lib/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/lib/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-ui-user/src/app/pages/people/people-interests/people-interests.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-ui-user/src/app/pages/people/people-interests/people-interests.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-ui-user/src/app/pages/profile/profile-data/profile-data-interests/profile-data-interests.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-ui-user/src/app/pages/profile/profile-data/profile-data-interests/profile-data-interests.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +69,7 @@
       <workItem from="1606032012545" duration="1379000" />
       <workItem from="1606297189617" duration="20802000" />
       <workItem from="1606379236897" duration="108000" />
+      <workItem from="1606379584738" duration="5632000" />
     </task>
     <servers />
   </component>
@@ -109,26 +104,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605687098873" />
-    <state width="1515" height="37" key="GridCell.Tab.0.bottom" timestamp="1606331532031">
+    <state width="1515" height="271" key="GridCell.Tab.0.bottom" timestamp="1606393200892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="37" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606331532031" />
-    <state width="1515" height="37" key="GridCell.Tab.0.center" timestamp="1606331532031">
+    <state width="1515" height="271" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606393200892" />
+    <state width="1515" height="271" key="GridCell.Tab.0.center" timestamp="1606393200892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="37" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606331532031" />
-    <state width="1515" height="37" key="GridCell.Tab.0.left" timestamp="1606331532031">
+    <state width="1515" height="271" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606393200892" />
+    <state width="1515" height="271" key="GridCell.Tab.0.left" timestamp="1606393200892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="37" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606331532031" />
-    <state width="1515" height="37" key="GridCell.Tab.0.right" timestamp="1606331532031">
+    <state width="1515" height="271" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606393200892" />
+    <state width="1515" height="271" key="GridCell.Tab.0.right" timestamp="1606393200892">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="37" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606331532031" />
-    <state x="478" y="145" width="669" height="534" key="find.popup" timestamp="1606312941939">
+    <state width="1515" height="271" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606393200892" />
+    <state x="478" y="145" width="669" height="534" key="find.popup" timestamp="1606388726013">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="145" width="669" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606312941939" />
+    <state x="478" y="145" width="669" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606388726013" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1605696937964">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

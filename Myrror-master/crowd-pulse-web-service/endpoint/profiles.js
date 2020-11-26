@@ -365,6 +365,7 @@ module.exports = function() {
                                             _id: 0,
                                             value: 1,
                                             confidence: 1,
+                                            source:1,
                                             timestamp: 1
                                         }, function (err, profile) {
                                             if (profile) {
