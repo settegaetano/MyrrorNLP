@@ -36,6 +36,14 @@ exports.endpoint = function() {
 
 
             var username = "";
+
+            /*Valori boolean che hanno lo scopo di capire se ho le varie informazioni sulla musica
+              per poi poter fare inferenze sui video. Si attivano solo se l'info associata ha confidence = 1*/
+            var flagArtista = false;
+            var flagGenere = false;
+            var flagSong = false;
+            var flagArtistaRicavato = false;
+
             return dbConn.connect(config.database.url, 'profiles')
                 .then(function (conn) {
                     return conn.Profile.findOne({email: preference.email},function (err,user){username = user.username})
@@ -48,9 +56,13 @@ exports.endpoint = function() {
                                 like = 'Dislike:';
                             }
 
-
                             console.log(preference);
 
+
+                            flagArtista = false;
+                            flagGenere = false;
+                            flagSong = false;
+                            flagArtistaRicavato = false;
 
                             return dbConn.connect(config.database.url, username)
                                 .then(function (conn) {
@@ -58,14 +70,28 @@ exports.endpoint = function() {
                                     //Se abbiamo il genere
                                     if ((typeof preference.genre !== 'undefined') && (typeof preference.genre !== 'null')) {
 
-                                        if (preference.artist !== 'null' && preference.song !== 'null') { //abbiamo artista e canzone
+                                        preference.genre = preference.genre.toLowerCase();
+
+                                        if ((typeof preference.artist !== 'null') && (typeof preference.artist !== 'undefined') &&
+                                            (typeof preference.song !== 'null') && (typeof preference.song !== 'undefined')) { //abbiamo artista e canzone
                                             confidence.genre = 0.5; //se ho artista e canzone, il genere l'ho ricavato
+
+                                            preference.artist = preference.artist.toLowerCase();
+                                            preference.song = preference.song.toLowerCase();
+
+
+                                            //Info utili per fare inferenza
+                                            flagArtista = true;
+                                            flagSong = true;
                                         } else {
                                             confidence.genre = 1;//genere scritto esplicitamente dall'utente
+
+                                            //Info utili per fare inferenza
+                                            flagGenere = true;
                                         }
 
                                         return conn.Interest.update(
-                                            {value: like + 'Genre:' + preference.genre}, //controllo su genre
+                                            {value: like + 'Genre:' + preference.genre, source:'music_preference'}, //controllo su genre
                                             {
                                                 value: like + 'Genre:' + preference.genre,
                                                 source: 'music_preference',
@@ -75,6 +101,7 @@ exports.endpoint = function() {
                                             {upsert: true})
                                             .then(qSend(res))
                                             .catch(qErr(res))
+
                                     }
 
                                 })
@@ -86,8 +113,13 @@ exports.endpoint = function() {
                                         if ((typeof preference.song !== 'undefined') && (typeof preference.song !== 'null')) {
                                             confidence.song = 1;//canzone scritta esplicitamente dall'utente
 
+                                            preference.song = preference.song.toLowerCase();
+
+                                            //Info utili per fare inferenza
+                                            flagSong = true;
+
                                             return conn.Interest.update(
-                                                {value: like + 'Song:' + preference.song}, //controllo su song
+                                                {value: like + 'Song:' + preference.song, source:'music_preference'}, //controllo su song
                                                 {
                                                     value: like + 'Song:' + preference.song,
                                                     source: 'music_preference',
@@ -97,32 +129,151 @@ exports.endpoint = function() {
                                                 {upsert: true})
                                                 .catch(qErr(res))
                                         }
-                                    })
+                                    }).finally(function() {
+                                            dbConn.disconnect();
+                                        });
+                                })
+                                .then(function () {
+                                    return dbConn.connect(config.database.url, username)
+                                        .then(function (conn) {
+
+                                            //Se abbiamo l'artista
+                                            if ((typeof preference.artist !== 'undefined') && (typeof preference.artist !== 'null')) {
+                                                preference.artist = preference.artist.toLowerCase();
+
+                                                if ((typeof preference.song !== 'undefined') && (typeof preference.song !== 'null')) { //ho la canzone
+                                                    confidence.artist = 0.7;//artista ricavato
+
+                                                    preference.song = preference.song.toLowerCase();
+
+                                                    //Info utili per fare inferenza
+                                                    flagSong = true;
+                                                    flagArtistaRicavato = true;
+
+                                                } else {
+                                                    confidence.artist = 1;//artista esplicitamente scritto
+
+                                                    //Info utili per fare inferenza
+                                                    flagArtista = true;
+                                                }
+
+                                                return conn.Interest.update(
+                                                    {value: like + 'Artist:' + preference.artist, source:'music_preference'}, //controllo su artist
+                                                    {
+                                                        value: like + 'Artist:' + preference.artist,
+                                                        source: 'music_preference',
+                                                        confidence: confidence.artist,
+                                                        timestamp: preference.timestamp
+                                                    },
+                                                    {upsert: true})
+                                                    //.then(qSend(res))
+                                                    .catch(qErr(res))
+                                            }
+
+                                        }).finally(function() {
+                                            dbConn.disconnect();
+                                        });
+                                })
+                                .then(function () {
+                                    console.log('165');
+                                    return dbConn.connect(config.database.url, username)
+                                        .then(function (conn) {
+
+                                            /*
+                                            Inferenza sulle news
+                                            Se Artista è ricavato allora la confidence per le news sull'artista è 0.35
+                                            Se Artista non è ricavato allora la confidence per le news è 0.50
+                                             */
+                                            var confidence;
+                                            if (flagArtistaRicavato){ //Artista ricavato
+                                                confidence = 0.35;
+
+                                            }else if (flagArtista){//Artista non ricavato
+                                                confidence = 0.56
+                                            }
+                                            console.log('181');
+                                            return conn.Interest.update(
+                                                {value: like + preference.artist, source:'news_preference'},//controllo esistenza
+                                                {
+                                                    value: like + preference.artist,
+                                                    source: 'news_preference',
+                                                    confidence: confidence,
+                                                    timestamp: preference.timestamp
+                                                },
+                                                {upsert: true})
+                                                //.then(qSend(res))
+                                                .catch(qErr(res))
+
+
+                                        }).finally(function() {
+                                            console.log('196');
+                                            dbConn.disconnect();
+                                        });
+                                })
+                                .then(function () {
+                                    return dbConn.connect(config.database.url, username)
+                                        .then(function (conn) {
+
+                                            /*
+                                            Il controllo della song viene fatto sepratamente in modo da poter gestire il caso in cui ho
+                                            sia la song che l'artist con confidence pari ad 1 e quindi devo inserire l'inferenza per entrambi
+                                             */
+                                            if (flagSong){
+                                                return conn.Interest.update(
+                                                    {value: like + preference.song, source:'video_preference'},
+                                                    {
+                                                        value: like + preference.song,
+                                                        source: 'video_preference',
+                                                        confidence: 0.5,
+                                                        timestamp: preference.timestamp
+                                                    },
+                                                    {upsert: true})
+                                                    //.then(qSend(res))
+                                                    .catch(qErr(res))
+                                            }
+
+                                        }).finally(function() {
+                                            dbConn.disconnect();
+                                        });
                                 })
                                 .then(function(){
                                     return dbConn.connect(config.database.url,username)
                                     .then(function (conn) {
 
-                                        //Se abbiamo l'artista
-                                        if ((typeof preference.artist !== 'undefined') && (typeof preference.artist !== 'null')) {
-                                            if (preference.song !== 'null') { //ho la canzone
-                                                confidence.artist = 0.7;//artista ricavato
-                                            } else {
-                                                confidence.artist = 1;//artista esplicitamente scritto
-                                            }
+                                        console.log("Confidence artist: " + flagArtista);
+                                        console.log("Confidence song: " + flagSong);
+                                        console.log("Confidence genre: " + flagGenere);
+
+                                        //Aggiungo inferenze sulla confidence di altri domini
+                                        if (flagGenere){
 
                                             return conn.Interest.update(
-                                                {value: like + 'Artist:' + preference.artist}, //controllo su artist
+                                                {value: like + preference.genre, source:'video_preference'},
                                                 {
-                                                    value: like + 'Artist:' + preference.artist,
-                                                    source: 'music_preference',
-                                                    confidence: confidence.artist,
+                                                    value: like + preference.genre,
+                                                    source: 'video_preference',
+                                                    confidence: 0.5,
+                                                    timestamp: preference.timestamp
+                                                },
+                                                {upsert: true})
+                                                .then(qSend(res))
+                                                .catch(qErr(res))
+
+                                        }else if (flagArtista){
+
+                                            return conn.Interest.update(
+                                                {value: like + preference.artist, source:'video_preference'},
+                                                {
+                                                    value: like + preference.artist,
+                                                    source: 'video_preference',
+                                                    confidence: 0.5,
                                                     timestamp: preference.timestamp
                                                 },
                                                 {upsert: true})
                                                 .then(qSend(res))
                                                 .catch(qErr(res))
                                         }
+
 
                                     }).finally(function() {
                                         dbConn.disconnect();

@@ -44,34 +44,59 @@ exports.endpoint = function() {
 
                         return dbConn.connect(config.database.url, username)
 
-                            .then(function(){
-                                return dbConn.connect(config.database.url,username)
-                                    .then(function (conn) {
+                        .then(function(){
+                            return dbConn.connect(config.database.url,username)
+                                .then(function (conn) {
 
 
-                                        return conn.Interest.update(
-                                            {value: like + 'Topic:' + preference.topic}, //controllo su training
-                                            {
-                                                value: like + 'Topic:' + preference.topic,
-                                                source: 'news_preference',
-                                                confidence: 1,
-                                                timestamp: preference.timestamp
-                                            },
-                                            {upsert: true})
-                                            .then(qSend(res))
-                                            .catch(qErr(res))
+                                    return conn.Interest.update(
+                                        {value: like + preference.topic,
+                                            source: 'news_preference'}, //controllo su training
+                                        {
+                                            value: like + preference.topic,
+                                            source: 'news_preference',
+                                            confidence: 1,
+                                            timestamp: preference.timestamp
+                                        },
+                                        {upsert: true})
+                                        .then(qSend(res))
+                                        .catch(qErr(res))
 
 
-                                    }).finally(function() {
-                                        dbConn.disconnect();
-                                    });
-                            })
+                                }).finally(function() {
+                                    dbConn.disconnect();
+                                });
+                        }).then(function(){
+                            return dbConn.connect(config.database.url,username)
+                            .then(function (conn) {
 
-                    })
-            });
+
+                                return conn.Interest.update(
+                                    {value: like + preference.topic,
+                                        source: 'video_preference'}, //controllo su training
+                                    {
+                                        value: like + preference.topic,
+                                        source: 'video_preference',
+                                        confidence: 0.5,
+                                        timestamp: preference.timestamp
+                                    },
+                                    {upsert: true})
+                                    .then(qSend(res))
+                                    .catch(qErr(res))
 
 
-    });
+                            }).finally(function() {
+                                dbConn.disconnect();
+                            });
+
+
+                        })
+
+                })
+        });
+
+
+});
 
     return router;
 };

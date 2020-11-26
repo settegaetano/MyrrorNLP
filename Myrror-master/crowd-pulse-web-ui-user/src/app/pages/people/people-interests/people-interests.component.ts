@@ -62,6 +62,15 @@ export class PeopleInterestComponent implements OnInit {
   },{
     id: 'training_preference',
     name: 'Training',
+  },{
+    id: 'tv_preference',
+    name: 'Tv Programs',
+  },{
+    id: 'video_preference',
+    name: 'Video',
+  },{
+    id: 'recipe_preference',
+    name: 'Recipes',
   },
 
     // TODO add here new source type

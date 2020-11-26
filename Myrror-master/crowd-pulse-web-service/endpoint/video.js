@@ -9,16 +9,15 @@ var databaseName = require('../crowd-pulse-data/databaseName');
 
 exports.endpoint = function() {
 
-    router.route('/training').post(function(req,res){
+    router.route('/video').post(function(req,res){
 
         var dbConn = new CrowdPulse();
 
         var like;
 
-
         var preference = {
             email:req.body.username,
-            genre: req.body.genre,
+            title: req.body.title,
             like: req.body.like,
             timestamp: new Date().getTime()
         };
@@ -48,40 +47,21 @@ exports.endpoint = function() {
                                     .then(function (conn) {
 
                                         return conn.Interest.update(
-                                            {value: like + 'Training:' + preference.genre, source:'training_preference'}, //controllo su training
+                                            {value: like + preference.title, source:'video_preference'},
                                             {
-                                                value: like + 'Training:' + preference.genre,
-                                                source: 'training_preference',
+                                                value: like + preference.title,
+                                                source: 'video_preference',
                                                 confidence: 1,
                                                 timestamp: preference.timestamp
                                             },
                                             {upsert: true})
-                                            //.then(qSend(res))
+                                            .then(qSend(res))
                                             .catch(qErr(res))
 
-                            })
-                    })
-                    .then(function(){
-                        return dbConn.connect(config.database.url,username)
-                            .then(function (conn) {
 
-                                //Aggiungo inferenze sulla confidence di altri domini
-                                return conn.Interest.update(
-                                    {value: like + preference.genre, source:'video_preference'},
-                                    {
-                                        value: like + preference.genre,
-                                        source: 'video_preference',
-                                        confidence: 0.5,
-                                        timestamp: preference.timestamp
-                                    },
-                                    {upsert: true})
-                                    .then(qSend(res))
-                                    .catch(qErr(res))
-
-
-                                }).finally(function() {
-                                    dbConn.disconnect();
-                                });
+                                    }).finally(function() {
+                                        dbConn.disconnect();
+                                    });
                             })
 
                     })
