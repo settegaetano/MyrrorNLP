@@ -34,10 +34,10 @@ var music = require('./../endpoint/music');
 var news = require('./../endpoint/news');
 var training = require('./../endpoint/training');
 var programmatv = require('./../endpoint/programmatv');
+var removeInterest = require('../endpoint/removeInterest');
 var video = require('./../endpoint/video');
 var recipes = require('./../endpoint/recipes');
 var instagram = require('./../endpoint/instagram');
-var remove = require('../endpoint/remove');
 
 var endpointAuth = require('./../endpoint/auth');
 var socketLogs = require('./../sockets/logs');
@@ -104,7 +104,7 @@ var webServiceSetup = function(crowdPulse) {
   app.use(API,programmatv.endpoint());
   app.use(API,video.endpoint());
   app.use(API,recipes.endpoint());
-  app.use(API,remove.endpoint);
+  app.use(API,removeInterest.endpoint());
 
   return crowdPulse;
 };
