@@ -98,5 +98,71 @@ exports.endpoint = function() {
 
 });
 
+
+router.route('/newsfeed').post(function(req,res){
+
+    var dbConn = new CrowdPulse();
+
+    var like;
+
+
+    var preference = {
+        email:req.body.email,
+        url: req.body.url,
+        like: req.body.like,
+        timestamp: new Date().getTime()
+    };
+
+    console.log(preference.email);
+
+       //Check like/dislike
+       if (preference.like == 1){
+            like = 'Like:';
+        }else {
+            like = 'Dislike:';
+        }
+
+
+    var username = "";
+    return dbConn.connect(config.database.url, 'profiles')
+        .then(function (conn) {
+            return conn.Profile.findOne({email: preference.email},function (err,user){username = user.username})
+                .then(function (){
+                    
+                    return dbConn.connect(config.database.url, username)
+
+                    .then(function(){
+                        return dbConn.connect(config.database.url,username)
+                            .then(function (conn) {
+
+
+                                return conn.Interest.update(
+                                    {value: like + preference.url,
+                                        source: 'news_feedback'}, //controllo su training
+                                    {
+                                        value: like + preference.url,
+                                        source: 'news_feedback',
+                                        confidence: 1,
+                                        timestamp: preference.timestamp
+                                    },
+                                    {upsert: true})
+                                    .then(qSend(res))
+                                    .catch(qErr(res))
+
+
+                            }).finally(function() {
+                                dbConn.disconnect();
+                            });
+                    })
+
+            })
+    });
+
+
+});
+
+
+
+
     return router;
 };
