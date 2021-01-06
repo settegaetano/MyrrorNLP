@@ -287,5 +287,69 @@ exports.endpoint = function() {
        
     });
 
+
+    router.route('/musicfeed').post(function(req,res){
+
+        var dbConn = new CrowdPulse();
+
+        var like;
+
+
+        var preference = {
+            email:req.body.email,
+            artista: req.body.artista,
+            like: req.body.like,
+            timestamp: new Date().getTime()
+        };
+
+        console.log(preference.artista);
+
+        //Check like/dislike
+        if (preference.like == 1){
+            like = 'Like:';
+        }else {
+            like = 'Dislike:';
+        }
+
+        if (preference.artista){
+            var username = "";
+            return dbConn.connect(config.database.url, 'profiles')
+                .then(function (conn) {
+                    return conn.Profile.findOne({email: preference.email},function (err,user){username = user.username})
+                        .then(function (){
+
+                            return dbConn.connect(config.database.url, username)
+
+                                .then(function(){
+                                    return dbConn.connect(config.database.url,username)
+                                        .then(function (conn) {
+
+                                            return conn.Interest.update(
+                                                {value: like + preference.artista,
+                                                    source: 'music_feedback'}, //controllo su training
+                                                {
+                                                    value: like + preference.artista,
+                                                    source: 'music_feedback',
+                                                    confidence: 1,
+                                                    timestamp: preference.timestamp
+                                                },
+                                                {upsert: true})
+                                                .then(qSend(res))
+                                                .catch(qErr(res))
+
+
+                                        }).finally(function() {
+                                            dbConn.disconnect();
+                                        });
+                                })
+
+                        })
+                });
+        }
+
+
+
+    });
+
     return router;
 };

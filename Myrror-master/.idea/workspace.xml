@@ -20,10 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="594237f0-3254-4b7a-81c8-d1f25c26e7bf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/removeInterest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/remove.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/lib/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/lib/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/music.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/music.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/news.js" beforeDir="false" afterPath="$PROJECT_DIR$/crowd-pulse-web-service/endpoint/news.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +71,19 @@
       <workItem from="1606379584738" duration="5632000" />
       <workItem from="1606495980602" duration="1097000" />
       <workItem from="1606553368095" duration="3999000" />
+      <workItem from="1606820364419" duration="610000" />
+      <workItem from="1606994362517" duration="10000" />
+      <workItem from="1607512553150" duration="601000" />
+      <workItem from="1607765362676" duration="561000" />
+      <workItem from="1607767243547" duration="719000" />
+      <workItem from="1607934673392" duration="19000" />
+      <workItem from="1607934859653" duration="1280000" />
+      <workItem from="1609347310134" duration="15000" />
+      <workItem from="1609347326904" duration="1700000" />
+      <workItem from="1609587951798" duration="702000" />
+      <workItem from="1609661091319" duration="748000" />
+      <workItem from="1609856241754" duration="2986000" />
+      <workItem from="1609946304223" duration="2404000" />
     </task>
     <servers />
   </component>
@@ -102,30 +114,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1606554234856" />
-    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1605687098873">
+    <state x="548" y="167" key="FileChooserDialogImpl" timestamp="1609347323078">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605687098873" />
-    <state width="1515" height="265" key="GridCell.Tab.0.bottom" timestamp="1606560722097">
+    <state x="548" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1609347323078" />
+    <state width="1515" height="115" key="GridCell.Tab.0.bottom" timestamp="1609953601109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="265" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606560722097" />
-    <state width="1515" height="265" key="GridCell.Tab.0.center" timestamp="1606560722097">
+    <state width="1515" height="115" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1609953601109" />
+    <state width="1515" height="115" key="GridCell.Tab.0.center" timestamp="1609953601109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="265" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606560722097" />
-    <state width="1515" height="265" key="GridCell.Tab.0.left" timestamp="1606560722097">
+    <state width="1515" height="115" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1609953601109" />
+    <state width="1515" height="115" key="GridCell.Tab.0.left" timestamp="1609953601108">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="265" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606560722097" />
-    <state width="1515" height="265" key="GridCell.Tab.0.right" timestamp="1606560722097">
+    <state width="1515" height="115" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1609953601108" />
+    <state width="1515" height="115" key="GridCell.Tab.0.right" timestamp="1609953601109">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="265" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606560722097" />
-    <state x="478" y="145" width="669" height="534" key="find.popup" timestamp="1606554266100">
+    <state width="1515" height="115" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1609953601109" />
+    <state x="478" y="145" width="835" height="534" key="find.popup" timestamp="1609952274640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="478" y="145" width="669" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1606554266100" />
+    <state x="478" y="145" width="835" height="534" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1609952274640" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1605696937964">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
