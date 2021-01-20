@@ -17,6 +17,8 @@ export class ProfileDataInterestComponent implements OnInit {
   re5 = /Training:/gi;
   re6 = /Canale:/gi;
   re7 = /Genre:/gi;
+  re8 = /;/gi;
+
   /**
    * The user profile (logged or not).
    */
@@ -134,7 +136,7 @@ export class ProfileDataInterestComponent implements OnInit {
       this.data = stats.map((data) => {
         return {
           weight: data.weight,
-          text: data.value.replace(this.re,"").replace(this.re2,"").replace(this.re3,"").replace(this.re4,"").replace(this.re5,"").replace(this.re6,""),
+          text: data.value.replace(this.re,"").replace(this.re2,"").replace(this.re3,"").replace(this.re4,"").replace(this.re5,"").replace(this.re6,"").replace(this.re7,"").replace(this.re8,""),
         };
       });
     });
